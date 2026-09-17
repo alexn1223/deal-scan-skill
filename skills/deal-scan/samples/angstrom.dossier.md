@@ -33,15 +33,11 @@ Proxy fields as returned: `proxy_type: null`, `implementations: []`.
 
 Not covered in this sample run.
 
+## Operating scope
+
+Not covered in this sample run.
+
 ## Competitors
-
-Not covered in this sample run.
-
-## Geography
-
-Not covered in this sample run.
-
-## Watchlists
 
 Not covered in this sample run.
 

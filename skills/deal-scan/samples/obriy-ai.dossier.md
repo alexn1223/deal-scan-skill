@@ -49,15 +49,11 @@ This figure is published by a firm that sells the report it comes from. Two furt
 vendors publish figures for the same sector on different definitions; those figures were
 not fetched in this scan and are recorded in `gaps.md`.
 
+## Operating scope
+
+Not covered in this sample run.
+
 ## Competitors
-
-Not covered in this sample run.
-
-## Geography
-
-Not covered in this sample run.
-
-## Watchlists
 
 Not covered in this sample run.
 

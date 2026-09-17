@@ -34,15 +34,6 @@ by search.
 | Certificate history, subdomains | `crt.sh` |
 | Site history | `web.archive.org/cdx/search/cdx` |
 
-## Watchlists
-
-| List | Source |
-|---|---|
-| US sanctions | `sanctionssearch.ofac.treas.gov` |
-| EU consolidated | `webgate.ec.europa.eu/fsd/fsf` |
-| UK | OFSI consolidated list, `gov.uk` |
-| UN | `scsanctions.un.org` |
-
 ## Not publicly checkable
 
 Cayman Islands, British Virgin Islands, Seychelles, Marshall Islands, and Singapore

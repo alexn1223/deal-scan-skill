@@ -37,13 +37,12 @@ The disclaimer section is exempt from both, and is reproduced verbatim from
 5. **Digital footprint**
 6. **Traction**
 7. **Market**
-8. **Competitors**
-9. **Geography**
-10. **Watchlists**
-11. **Web3** — present only on the web3 branch
-12. **Disagreements** — every claim with `conflict: true`, both sides shown
-13. **Could not find** — a pointer into `gaps.md`
-14. **Disclaimer** — verbatim
+8. **Operating scope** — the field and the countries, labelled as the scan's working definition
+9. **Competitors**
+10. **Web3** — present only on the web3 branch
+11. **Disagreements** — every claim with `conflict: true`, both sides shown
+12. **Could not find** — a pointer into `gaps.md`
+13. **Disclaimer** — verbatim
 
 A block that yielded nothing keeps its heading and carries gap entries. Dropping the
 heading hides the fact that nothing was found.

@@ -118,20 +118,34 @@ Run every block in a scan. A block that yields nothing produces gaps entries, no
    rendered only as *"&lt;firm&gt; (&lt;date&gt;) states &lt;figure&gt;"*, with who published it and
    what they were selling. Never "the TAM is". Vendor reports on the same market
    routinely disagree by an order of magnitude; show the spread and let it speak.
-7. **Competitors** — found four ways: the target's own comparison pages, alternatives
-   directories, competitors' pages that name the target, and accelerator batchmates. Per
-   competitor: URL, a self-description quoted from their own site, founded year, funding
-   with source, geography, public pricing. Also: who exists that the target does not
-   mention, and recent acquisitions or shutdowns in the category.
-8. **Geography** — claimed HQ versus registered address versus where the team actually
-   is, by profile locations and job post locations. These three disagreeing is common and
-   worth recording. Plus the regulatory regime for the activity in that jurisdiction.
-9. **Watchlists** — official sanctions and regulator lists only: OFAC SDN, EU
-   consolidated, UK OFSI, UN, and published regulator warning lists. Plus a news search
-   on the company and each founder name, which may contribute **headlines and links
-   only**. No characterization, no summary, no inference. A clear result is always
-   written as "searched N lists, 0 matches — not evidence of absence."
-10. **Web3** — run only if the deal has a token, contract or chain. Endpoints and their
+7. **Operating scope — the field, and the countries.** Everything in the competitor
+   block depends on two decisions taken here, so both are written down where the user can
+   correct them. **The field**: one line, built from the company's own self-description,
+   quoted. **The countries**: where the customers and the revenue are, which is not
+   necessarily where the company is registered or where the team sits. Evidence for the
+   country list: the languages and currencies the site offers, customers named or
+   described, the currency on the pricing page, job post locations, region-specific
+   channels and integrations, and any regulatory regime the company says it operates
+   under. Both the field and the country list are the scan's **working definition**,
+   labelled as such and never written as a fact about the company. Say both back to the
+   user before the competitor block runs — a wrong field produces a wrong competitor set,
+   and correcting it here costs one message instead of a whole pass.
+8. **Competitors — the large players in that field, in those countries.** Size is a cited
+   number, never a label. The ban list forbids "leader" and "market leading", and that is
+   the point: "raised $340M, per Crunchbase" is checkable and "the market leader" is not.
+   Per competitor: URL, a self-description quoted from their own site, founded year,
+   funding with its source, headcount signal, public pricing, and the countries served.
+   Found five ways — the target's own comparison pages; alternatives directories;
+   competitors' comparison pages that name the target; accelerator batchmates; and a
+   direct search for the field **within each country, in that country's language** where
+   it is not English, which is how regional incumbents surface that no English-language
+   directory carries. Also: who exists in that field and those countries that the target
+   does not mention, and recent acquisitions or shutdowns in the category. Where a
+   published market-share figure exists it is quoted with the firm that published it and
+   the date, handled exactly as sizing is in block 6. Where none exists, which is usual,
+   say so rather than substituting an impression of who is big.
+
+9. **Web3** — run only if the deal has a token, contract or chain. Endpoints and their
     traps are in `references/web3-sources.md`; all of it is reachable at tier 0 with no
     API key. Collect: the contract and whether its source is verified — `is_verified` and
     `is_fully_verified` are different fields and may disagree; the compiler version and
@@ -144,7 +158,7 @@ Run every block in a scan. A block that yields nothing produces gaps entries, no
     weaker; TVL and volume; repository ages and push dates; and prior launches by the
     same addresses.
 
-11. **Run metadata** — branch taken, tier, every URL with its fetch timestamp and
+10. **Run metadata** — branch taken, tier, every URL with its fetch timestamp and
     outcome, and the fetch count.
 
 ## Fetching is not trivial here

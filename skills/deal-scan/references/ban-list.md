@@ -65,7 +65,23 @@ leader
 laggard
 best in class
 market leading
+major
+dominant
+dominates
+significant
+largest
+biggest
+well-funded
+key player
+major player
+top player
+household name
 ```
+
+Size words sit in List A for the same reason as the verdict words. "The largest player in
+the category" is an assertion no source made; "raised $340M, per Crunchbase" is a fact
+with a link. Competitor size is always a cited number or a quoted market-share figure with
+the firm that published it named — never an adjective.
 
 **List B — smuggled-inference markers.** Hedges, framings and emphasis that carry a judgment without naming one. "Only three employees" is a verdict wearing a number's clothes; "three employees" is a fact. These are the ways characterization re-enters a document that has banned the obvious words.
 

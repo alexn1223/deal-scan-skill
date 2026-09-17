@@ -26,7 +26,7 @@
           "id": {"type": "string"},
           "block": {
             "enum": ["existence", "footprint", "people", "traction", "funding",
-                     "market", "competitors", "geography", "watchlists", "web3"]
+                     "market", "scope", "competitors", "web3"]
           },
           "statement": {
             "type": "string",

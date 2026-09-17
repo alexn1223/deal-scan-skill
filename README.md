@@ -1,6 +1,16 @@
 # deal-scan
 
-A Claude skill for desk research on one startup deal.
+Two Claude skills for desk research on one startup deal.
+
+| Skill | What it does | Needs |
+|---|---|---|
+| `deal-scan-lite` | A quick web-search brief — team, what they do, how big the field is, whether they have raised, who else works in it. A link on every line, no setup, one pass. | Anywhere |
+| `deal-scan` | The full version: four researchers in parallel, every quote verified against the live page by script, ten-rule gate, three competitor rings. | Claude Code |
+
+`deal-scan` dispatches subagents, so it needs Claude Code. On claude.ai or Desktop, use
+`deal-scan-lite`.
+
+## deal-scan
 
 It collects market, competitor, geography, company-existence and founder information for
 a single company and returns a dossier in which **every line carries a verbatim quote and
@@ -20,7 +30,7 @@ neither is resolved, and a request for a judgement gets a fixed refusal.
 
 Zip the skill folder and upload it in Settings → Capabilities → Skills.
 
-    cd skills && zip -qr deal-scan.zip deal-scan
+    cd skills && zip -qr deal-scan.zip deal-scan && zip -qr deal-scan-lite.zip deal-scan-lite
 
 ## Dependencies
 

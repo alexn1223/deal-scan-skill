@@ -4,14 +4,14 @@
     "name": "Alex Nykonovych"
   },
   "metadata": {
-    "description": "Desk research on a startup deal — market, competitors, geography, company existence and founder verification — returned as a dossier in which every line carries a verbatim quote and a live URL. Renders no verdicts.",
-    "version": "1.0.0"
+    "description": "deal-scan-lite is a quick web-search brief on one company — team, what it does, field size, whether it has raised, and who else works in the field — with a link on every line and no setup. deal-scan is the full version: four researchers in parallel, every quote verified against the live page by script, gated by ten rules.",
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "deal-scan",
       "source": "./",
-      "description": "Desk research on a startup deal — market, competitors, geography, company existence and founder verification — returned as a dossier in which every line carries a verbatim quote and a live URL. Renders no verdicts."
+      "description": "deal-scan-lite is a quick web-search brief on one company — team, what it does, field size, whether it has raised, and who else works in the field — with a link on every line and no setup. deal-scan is the full version: four researchers in parallel, every quote verified against the live page by script, gated by ten rules."
     }
   ]
 }

@@ -1,0 +1,267 @@
+{
+  "run": {
+    "target": "Obriy AI",
+    "branch": "equity",
+    "tier": 0,
+    "gear": "deep",
+    "started_at": "2026-09-17T11:00:00Z",
+    "fetch_count": 14,
+    "verified_at": "2026-09-17T09:45:50Z"
+  },
+  "claims": [
+    {
+      "id": "s1",
+      "block": "scope",
+      "statement": "Working definition of the field, taken from the company's own words: done-for-you AI agents that resolve customer support requests inside an existing helpdesk.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "Stop scaling your support team. Start scaling your AI workforce",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:39Z"
+        },
+        {
+          "url": "https://obriy.ai/",
+          "quote": "An AI employee we deploy for you",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:40Z"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "block": "scope",
+      "statement": "Working definition of the countries: Ukraine, evidenced by a described customer.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "Ukraine's largest grocery chain changed nothing in its contact centre.",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:40Z"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "block": "scope",
+      "statement": "Working definition of the countries: the European Union, evidenced by a described deployment.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "Deployed in a regulated EU financial business",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:41Z"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "block": "scope",
+      "statement": "Region-specific channels and CRMs are named as integrations, among international ones.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "KeyCRM Creatio Telegram Zendesk Intercom",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:41Z"
+        }
+      ]
+    },
+    {
+      "id": "k1",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "CoSupport AI. Resolves support tickets with AI agents for enterprises, multilingual.",
+      "sources": [
+        {
+          "url": "https://cosupport.ai/",
+          "quote": "CoSupport AI automates customer service with AI Agents and Assistants, resolving repetitive tickets",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 15612,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:43Z"
+        },
+        {
+          "url": "https://obriy.ai/",
+          "quote": "An AI employee we deploy for you",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:44Z"
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "AI Assist. Ukrainian agency building AI agents for support, integrated into the client's CRM, launch stated as one month.",
+      "sources": [
+        {
+          "url": "https://ai-assist.com.ua/uk/",
+          "quote": "Агенція AI Assist створює ШІ-агентів та асистентів для бізнесу",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 13746,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:44Z"
+        },
+        {
+          "url": "https://obriy.ai/",
+          "quote": "An AI employee we deploy for you",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:45Z"
+        }
+      ]
+    },
+    {
+      "id": "k3",
+      "block": "competitors",
+      "ring": 2,
+      "statement": "Zendesk AI agents. Same buyer and budget, configured by the customer inside the helpdesk rather than deployed for them. Named by the target as an integration.",
+      "sources": [
+        {
+          "url": "https://www.zendesk.com/service/ai/ai-agents/",
+          "quote": "Deploy AI agents that resolve up to 80% of customer interactions",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 24649,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:48Z"
+        },
+        {
+          "url": "https://obriy.ai/",
+          "quote": "An AI employee we deploy for you",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:48Z"
+        }
+      ]
+    },
+    {
+      "id": "k4",
+      "block": "competitors",
+      "ring": 3,
+      "statement": "AiAgents. Ukrainian, sells chat and voice agents with public pricing from 880 UAH per month.",
+      "sources": [
+        {
+          "url": "https://aiagents.com.ua/",
+          "quote": "Впровадження від 1 тижня, від 880 грн/міс",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 10519,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:50Z"
+        },
+        {
+          "url": "https://obriy.ai/",
+          "quote": "An AI employee we deploy for you",
+          "fetched_at": "2026-09-17T11:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5498,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T09:45:50Z"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "item": "Ukrainian-language version of the company site",
+      "kind": "not-found",
+      "searched": [
+        "obriy.ai/uk returns the control-probe fingerprint (soft 404)",
+        "obriy.ai/ua serves the English homepage"
+      ]
+    },
+    {
+      "item": "Public pricing for the target",
+      "kind": "not-found",
+      "searched": [
+        "obriy.ai"
+      ]
+    },
+    {
+      "item": "Ring 1 completeness beyond the two named",
+      "kind": "not-found",
+      "searched": [
+        "Ukrainian-language search for ШІ агенти для підтримки клієнтів",
+        "English alternatives directories"
+      ]
+    }
+  ]
+}

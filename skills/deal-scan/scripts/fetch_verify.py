@@ -51,6 +51,8 @@ BLOCK_MARKERS = (
 _SCRIPT = re.compile(r"<(script|style|noscript)\b[^>]*>.*?</\1>", re.I | re.S)
 _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"\s+")
+_META = re.compile(r"<meta\b[^>]*?content=([\"'])(.*?)\1[^>]*>", re.I | re.S)
+_TITLE = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
 
 
 def is_markup(text, ctype=""):
@@ -75,8 +77,15 @@ def normalise(raw, markup=True):
     """Comparable text. Tags and entities are handled only for real markup."""
     text = raw
     if markup:
+        # Hoist <title> and every <meta content="..."> before tags are removed.
+        # A company's own meta description is its cleanest self-description, and it
+        # lives inside an attribute — which tag stripping would otherwise delete,
+        # making the one string most worth quoting impossible to verify.
+        hoisted = [m.group(1) for m in _TITLE.finditer(text)]
+        hoisted += [m.group(2) for m in _META.finditer(text)]
         text = _SCRIPT.sub(" ", text)
         text = _TAG.sub(" ", text)
+        text = " ".join(hoisted) + " " + text
         text = html.unescape(text)
     return _WS.sub(" ", text).strip()
 

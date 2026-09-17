@@ -1,14 +1,13 @@
 ---
 name: deal-scan
-description: Desk research on a startup deal — market, competitors, geography, company existence and founder verification — returned as a dossier in which every line carries a verbatim quote and a live URL. Use when checking out a company before or during a deal.
+description: Research one startup deal in parallel — company and filings, people, product and market, competitors — returned as a dossier in which every line carries a verbatim quote and a live URL. Use when checking out a company before or during a deal.
 ---
 
 # deal-scan
 
-Desk research on one company, returned as a sourced dossier. The skill searches to find
-out what exists, fetches to make each line citable, and hands back three files: the
-readable dossier, the same content structured, and an explicit list of what it could not
-resolve.
+Research on one company, run as four researchers working at once and assembled into a
+sourced dossier. You are the orchestrator: you fix the scope, write the briefs, dispatch,
+and assemble. You do not do the research yourself.
 
 One company per run.
 
@@ -25,8 +24,7 @@ a scam. It may never say whether to invest, meet, pass or proceed. A disagreemen
 sources is reported as a disagreement, never resolved. A missing document is reported as
 absent from the sources searched, never as evidence of absence.
 
-If asked "so is this a good deal?", the answer is the fixed refusal in
-`references/disclaimer.md`, not an opinion.
+If asked "so is this a good deal?", give the refusal in `references/refusal.md`.
 
 ## What it produces
 
@@ -34,45 +32,92 @@ If asked "so is this a good deal?", the answer is the fixed refusal in
     findings.json  the same content structured, one record per claim
     gaps.md        what could not be resolved, and where it was looked for
 
-`gaps.md` is not optional. Silence about a missing thing reads as absence of a problem,
-so every unresolved item is written down with the sources that were tried.
+`gaps.md` is not optional. Silence about a missing thing reads as absence of a problem.
 
-## Two gears
+## How a run works
 
-**Scan** is the default and the only thing that runs unasked. It is a bounded pass —
-roughly 22–28 fetches — that covers every block below and ends with the gaps list.
+    1. Scope        you establish the field and the countries, and read them back
+    2. Dispatch     four researchers, in one message, working concurrently
+    3. Assemble     you merge what returns, run the gate, write the three files
 
-**Deep** runs only when the user names a section: "go deep on competitors", "go deep on
-the founders". It appends to the existing dossier under the same citation rules. Never
-run a deep pass on your own initiative; the budget is the user's to spend.
+### 1. Scope comes first, and it is yours
 
-Offer both in the first message, and say the scan's approximate fetch count before
-starting, because on a Free claude.ai account that budget is real.
+Competitors cannot be researched before the field is settled, so this step is not
+delegated and not skipped. Spend two or three browses on the company's own site, then
+write down:
 
-## Search finds, fetch cites
+- **The field** — one line, built from the company's own self-description, quoted.
+- **The countries** — where the customers and the revenue are, which is not necessarily
+  where the company is registered or where the team sits. Evidence: site languages and
+  currencies, the currency on the pricing page, customers named or described, job post
+  locations, region-specific channels and integrations, regulatory regimes the company
+  names.
 
-These two tools fail in opposite directions and are not interchangeable.
+Both are the scan's **working definition**, labelled as such, never written as a fact
+about the company. **Read both back to the user and wait.** A wrong field produces four
+wrong briefs; correcting it here costs one message instead of a whole run.
 
-**Search has recall without precision.** It surfaces what you did not know to look for —
-accelerator batches, prior raises, category acquisitions, competitor names, market
-reports. It returns a synthesis across many pages and cannot tell you which page said
-which thing.
+### 2. Dispatch four researchers in one message
 
-**Fetch has precision without recall.** It quotes exactly, but only from a URL you
-already have.
+Issue all four in a single response, or they run one after another instead of at once.
 
-Therefore: **nothing enters the dossier on the strength of a search result alone.** Search
-decides where to look. The fetch of that page is what makes a line citable. A claim you
-could not fetch a page for goes in `gaps.md`, not in the dossier.
+| Agent | Covers |
+|---|---|
+| **company** | Legal existence and filings, digital footprint, funding history, and the on-chain block when the deal has a contract |
+| **people** | Founders and team, titles, prior roles checked against those employers, profile and account ages |
+| **product** | Pricing, named customers and whether the customer says so back, repositories, job boards, app listings, and how the field is sized by third parties |
+| **competitors** | The three rings, including a search in the local language of each country in scope |
 
-This is not a style preference. A search summary of an investor's portfolio page omitted
-a portfolio company that the page itself listed; a dossier built on the summary would
-have asserted, with confidence, something false about a real company.
+Each brief is written from `references/agent-briefs.md`, which holds the full collection
+list, the return contract and the constraints for each. A brief is **self-contained**:
+the researcher has none of this conversation, so the target, the URL, the agreed field
+and countries, the source classes and the return shape all go into the brief itself.
+
+The four surfaces are disjoint by design, so the researchers do not need each other and
+do not share state.
+
+### 3. Assemble
+
+Merge the four returns into one `findings.json`, then run the gate. Where two researchers
+returned the same claim from different sources, keep both sources on one claim — that is
+what the `sources` array is for. Where they disagree, set `conflict: true` and show both.
+Never resolve a disagreement.
+
+## Every researcher verifies its own citations
+
+This is the part that does not bend.
+
+A browse tool answers a prompt **about** a page; it returns a model's paraphrase. In
+testing it supplied a URL that returned 404 and quotes that were not on the page. So each
+researcher, before returning anything, runs
+
+    python3 scripts/fetch_verify.py --findings <its own findings> --write
+
+and returns **only** claims whose sources came back `verified`. A paraphrased quote is
+fixed by the researcher that drafted it, while it still has the page in context. A quote
+that cannot be made to verify is dropped, and the item moves to that researcher's gaps
+list.
+
+The script exists because fetching is not as simple as it looks, and each of these was
+found by running it, not by reasoning about it:
+
+- **A 200 does not mean the page exists.** Single-page apps answer 200 for absent paths
+  and ship their own "not found" text inside every page bundle, so neither the status code
+  nor a content marker can be trusted. The script control-probes each host with a
+  deliberately random path and treats a byte-identical response as dead.
+- **A fetch has three outcomes.** `found`, `not-found`, and `blocked`. Bot protection, a
+  paywall or a login wall is `blocked`, and recording it as `not-found` is a lie: the
+  information exists and was not reached.
+- **Markup and data need different handling.** Stripping HTML tags from a JSON body
+  carrying source code deleted more than half an explorer response, including the string
+  under verification.
+- **The best self-description lives in an attribute.** A company's own meta description is
+  the cleanest statement of what it does, and it sits inside a tag, so the script hoists
+  `<title>` and every `<meta content="…">` before tags are removed.
 
 ## Source classes
 
-Every source carries one, assigned mechanically from the domain. See
-`references/source-classes.md`.
+Every source carries one, assigned from the domain. See `references/source-classes.md`.
 
 | Class | What it proves |
 |---|---|
@@ -84,146 +129,58 @@ Every source carries one, assigned mechanically from the domain. See
 | `social` | A profile asserts it |
 | `archive` | A capture or certificate log recorded it at a date |
 
-`primary-self` is the class most often mistaken for fact. Render it so the reader cannot
-miss that it is the company's own claim.
+The highest-value findings are two-sided, never single lookups: the company names an
+investor — does that investor's own site list them? The site claims a headcount — what
+does its company profile say? A founder claims a prior role — does that employer say so?
+Every brief tells its researcher to pair sources deliberately.
 
-The highest-value findings are almost never single lookups. They are two-sided: the
-company names an investor — does that investor's own site list them? The site claims a
-headcount — what does the company's LinkedIn page say? A founder claims a prior role —
-does that employer's own site or the press say so? Pair sources deliberately.
+## Competitors are three rings
 
-## The blocks
+The competitors brief asks three questions in order, each answered separately with its
+own count and named list. A ring with nothing in it is reported as a count of zero
+against the sources searched, never as silence.
 
-Run every block in a scan. A block that yields nothing produces gaps entries, not silence.
+- **Ring 1 — is anyone doing the same thing?** A customer could switch and have the same
+  job done the same way. Usually shortest, sometimes empty, and an empty ring 1 is a real
+  finding worth stating plainly.
+- **Ring 2 — is anyone competing for the same customer?** Same buyer, same budget,
+  different mechanism. Where the substitute the company does not think of as a competitor
+  lives: the spreadsheet, the agency, the in-house build, and the platform it integrates
+  with.
+- **Ring 3 — is anyone operating in the same field?** Widest, and in practice never empty.
 
-1. **Legal existence** — registry, number, incorporation date, status, officers, share
-   issuance filings, VAT validity, trademarks. Jurisdictions with no public registry
-   (Cayman, BVI, Singapore, Delaware in part) are recorded as **not checkable**, which is
-   not the same as not found. Registry map: `references/registries.md`.
-2. **Digital footprint** — domain age, certificate history and subdomains via crt.sh,
-   DNS and MX, first archive capture and what the site said earlier, robots and sitemap,
-   and the pages themselves: about, team, pricing, customers, careers, docs, terms,
-   privacy, imprint. The imprint and the terms of service often name the real legal
-   entity when nothing else does.
-3. **Founders and team** — named founders and titles, profile and account ages, claimed
-   prior roles checked against those employers, credentials, headcount as stated by the
-   site versus the company profile versus open job count.
-4. **Traction signals** — pricing, named customers and whether the customer mentions them
-   back, app listings, repository activity, Hacker News via the Algolia API, and job
-   boards, whose public JSON reveals headcount plans, stack and real office locations.
-5. **Funding history** — union of several sources, never one. A single article routinely
-   omits an earlier round. SEC EDGAR Form D, UK SH01 filings, accelerator directories,
-   and above all the claimed investors' own portfolio pages.
-6. **Market** — the market as the company defines it, quoted. Then third-party sizing
-   rendered only as *"&lt;firm&gt; (&lt;date&gt;) states &lt;figure&gt;"*, with who published it and
-   what they were selling. Never "the TAM is". Vendor reports on the same market
-   routinely disagree by an order of magnitude; show the spread and let it speak.
-7. **Operating scope — the field, and the countries.** Everything in the competitor
-   block depends on two decisions taken here, so both are written down where the user can
-   correct them. **The field**: one line, built from the company's own self-description,
-   quoted. **The countries**: where the customers and the revenue are, which is not
-   necessarily where the company is registered or where the team sits. Evidence for the
-   country list: the languages and currencies the site offers, customers named or
-   described, the currency on the pricing page, job post locations, region-specific
-   channels and integrations, and any regulatory regime the company says it operates
-   under. Both the field and the country list are the scan's **working definition**,
-   labelled as such and never written as a fact about the company. Say both back to the
-   user before the competitor block runs — a wrong field produces a wrong competitor set,
-   and correcting it here costs one message instead of a whole pass.
-8. **Competitors — three rings, asked in order.** Each ring is a question with a count
-   and a named list, and each is answered separately. A ring with nothing in it is
-   reported as a count of zero against the sources searched, never as silence.
+Ring assignment is a judgement, so it is shown rather than asserted: every entry carries
+both quotations it was placed on — the target's own description of what it does, and the
+competitor's own description.
 
-   **Ring 1 — is anyone doing the same thing?** A customer could switch and have the same
-   job done the same way. Usually the shortest list, sometimes empty, and an empty Ring 1
-   is a real finding worth stating plainly.
+**An empty ring 3 fails the run.** Every field has other people working in it, so nobody
+in ring 3 means the field was drawn wrongly in step 1, not that the company has no
+competitors. Redraw the field and dispatch the competitors brief again.
 
-   **Ring 2 — is anyone competing for the same customer?** Same buyer and same budget,
-   different mechanism. This is where the substitute the company does not think of as a
-   competitor lives, including the spreadsheet, the agency, and the in-house build.
+Size is a cited number, never a label. "Raised $340M, per Crunchbase" is checkable; "the
+largest" is not, and the ban list refuses it.
 
-   **Ring 3 — is anyone operating in the same field?** Widest ring, and in practice never
-   empty. It is the context the first two rings are read against.
+## The gate
 
-   Per competitor, in every ring: URL, a self-description **quoted from their own site**,
-   founded year, funding with its source, headcount signal, public pricing, and the
-   countries served.
+After assembling, and regardless of what the researchers reported:
 
-   **Ring assignment is a judgement, so it is shown rather than asserted.** Each entry
-   carries the two quotations it was placed on — the target's own description of what it
-   does, and the competitor's own description — so the reader can disagree with the
-   placement. No entry is assigned a ring without both.
+    python3 scripts/validate_output.py --findings findings.json --dossier dossier.md
 
-   **An empty Ring 3 fails the run.** Every field has other people working in it, so a
-   Ring 3 of zero is evidence that the field in block 7 was drawn wrongly — too narrow,
-   or in the wrong words — and the fix is to redraw it and search again. It is never
-   written up as a company having no competitors.
+Nine rules, listed in `references/output-contract.md`: every claim sourced, every source
+classed, timestamped and verified, both ban lists clear of anything you wrote yourself,
+a populated gaps file, every quotation in the dossier traceable to `findings.json`, the
+disclaimer present, and the competitor rings well formed.
 
-   Found five ways: the target's own comparison pages; alternatives directories;
-   competitors' comparison pages that name the target; accelerator batchmates; and a
-   direct search for the field **within each country, in that country's language** where
-   it is not English, which is how regional players surface that no English-language
-   directory carries.
+Ban lists apply to what the skill writes, never to quotations. A source may say anything;
+quoting it is reporting. Writing the same word yourself is a verdict.
 
-   Size is a cited number, never a label — "raised $340M, per Crunchbase", not "the
-   largest". Published market-share figures are quoted with the firm that published them
-   named, handled exactly as sizing is in block 6. Also recorded: who exists in the field
-   and the countries that the target does not mention, and recent acquisitions or
-   shutdowns in the category.
-
-9. **Web3** — run only if the deal has a token, contract or chain. Endpoints and their
-    traps are in `references/web3-sources.md`; all of it is reachable at tier 0 with no
-    API key. Collect: the contract and whether its source is verified — `is_verified` and
-    `is_fully_verified` are different fields and may disagree; the compiler version and
-    verification timestamp; the creation transaction and its date; **three addresses kept
-    apart** — the contract, its creator, and the account that sent the creation
-    transaction, which are routinely three different things and whose conflation invents
-    a fact; proxy type and implementations, recorded as fields rather than as a
-    conclusion about upgradeability; supply and holder concentration; any published
-    unlock schedule; audits as a named firm, date, scope and linked report, and nothing
-    weaker; TVL and volume; repository ages and push dates; and prior launches by the
-    same addresses.
-
-10. **Run metadata** — branch taken, tier, every URL with its fetch timestamp and
-    outcome, and the fetch count.
-
-## Fetching is not trivial here
-
-Run `scripts/fetch_verify.py`. Do not hand-verify.
-
-**A 200 does not mean the page exists.** Single-page applications return HTTP 200 with a
-"not found" body. Matching on the text of that body fails too, because frameworks ship
-the string inside the bundle of every page, including live ones. The reliable test is a
-**control probe**: fetch a deliberately random path on the same host first, fingerprint
-the response, and compare every later fetch against it. A page byte-identical to the
-control is dead, whatever its status code.
-
-**A fetch has three outcomes, not two.** `found`, `not-found`, and `blocked`. Bot
-protection, a paywall or a login wall is `blocked`, and recording it as `not-found` is a
-lie: the information exists and could not be reached. `blocked` sources are listed in
-`gaps.md` by name.
-
-**Verify against raw bytes, never against a summarizer.** A fetch tool that answers a
-prompt about a page returns a model's paraphrase; it will supply URLs that do not resolve
-and quotes that do not appear. Draft from it if you like. Verification is exact substring
-matching against the raw response, and that is what decides whether a line ships.
-
-## Gates
-
-    python scripts/fetch_verify.py --findings findings.json
-    python scripts/validate_output.py --findings findings.json --dossier dossier.md
-
-`fetch_verify.py` re-fetches every cited URL, control-probes its host, and asserts the
-quoted string appears verbatim. `validate_output.py` requires that every claim carries at
-least one verified source with a class and a timestamp, enforces
-`references/ban-list.md`, and requires the gaps section to exist. A failing run does not
-ship; fix the dossier or move the claim to `gaps.md`.
+A run that fails the gate does not ship.
 
 ## Refusals
 
 Asked whether to invest, whether the team is strong, whether the valuation is fair,
 whether the market is attractive, or whether anything is a red flag: give the refusal in
-`references/disclaimer.md` and offer to collect more sources instead.
+`references/refusal.md` and offer to dispatch a researcher for more sources instead.
 
 This is desk research from public sources at one moment in time. It is not legal due
 diligence, not an audit, not a background check, and not advice.

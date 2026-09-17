@@ -3,6 +3,13 @@
 Human-readable mirror of what the run writes and what `scripts/validate_output.py`
 checks. Documentation only; the scripts do not read this file.
 
+`findings.json` is assembled by the orchestrator from what the four researchers return.
+Each researcher has already run `fetch_verify.py` over its own set, so every source
+arriving here carries a `verification` block reading `verified`; the orchestrator's gate
+re-checks that rather than trusting it. Where two researchers returned the same claim
+from different sources, the sources merge onto one claim. Where they disagree, the claim
+carries `conflict: true` and both sides stand.
+
 ## Three files
 
 | File | Contents |

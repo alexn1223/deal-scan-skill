@@ -17,18 +17,31 @@ Nothing from an uploaded deck enters the dossier as fact. It becomes a set of cl
 go verify, and each one ends up confirmed by a public source, contradicted by one, or in
 `gaps.md`.
 
-## What a run costs
+## How a run goes
 
-A scan is roughly 22–28 fetches and covers every block. On a Free claude.ai account that
-is a real fraction of the message budget, so the scan is bounded deliberately and stops.
+**First you get a scope, and you are asked to confirm it.** The skill spends a couple of
+browses on the site and comes back with two lines — the field it thinks the company is
+in, and the countries it thinks the customers are in, both labelled as a working
+definition rather than a fact. Correct either one. A wrong field sends four researchers
+after the wrong competitors, and fixing it at that point costs one message.
 
-A deep pass runs only when you ask for one, by section:
+**Then four researchers run at once**, on disjoint ground:
 
-    deep competitors
-    deep founders
-    deep registry
+| Researcher | Looks for |
+|---|---|
+| company | Registry and filings, domain and site history, funding history, on-chain if there is a contract |
+| people | Founders, titles, prior roles checked against those employers |
+| product | Pricing, customers, repositories, job boards, and how the field is sized |
+| competitors | Ring 1, ring 2, ring 3 — including a search in each country's own language |
 
-Each appends to the dossier under the same rules.
+Each one verifies its own quotations before reporting, so a paraphrase is fixed by the
+researcher that wrote it rather than surviving into the dossier.
+
+**Then the results are merged** into the three files, and the whole thing goes through a
+nine-rule gate before you see it.
+
+To go further on one area afterwards, name it: `more on competitors`, `more on the
+founders`. That re-dispatches the one researcher.
 
 ## Reading the output
 

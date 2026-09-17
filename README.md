@@ -33,9 +33,21 @@ address:
 
     use deal-scan on acme.io
 
-A **scan** is the default: a bounded pass of roughly 22–28 fetches covering every block,
-ending with an explicit list of what it could not resolve. A **deep** pass runs only when
-you ask for one by section (`deep competitors`, `deep founders`).
+The run has three steps. First the skill fixes a **scope** — the field the company is in
+and the countries its customers are in — and reads both back for you to correct, because
+a wrong field sends every researcher after the wrong competitors. Then **four researchers
+work at once** on disjoint ground: company and filings, people, product and market, and
+competitors. Then the results are merged and put through a nine-rule gate.
+
+Each researcher verifies its own quotations before reporting, so a paraphrase is caught
+by the agent that wrote it rather than surviving into the dossier.
+
+Afterwards, name an area to go deeper: `more on competitors`, `more on the founders`.
+
+Competitors come back as three rings — is anyone doing the same thing, is anyone
+competing for the same customer, is anyone in the same field — each with its own count.
+An empty third ring fails the run, because every field has other people working in it and
+an empty one means the field was drawn wrongly.
 
 Two bundled samples run end to end without supplying anything of your own — one equity
 deal and one web3 deal, both with their verification results recorded:
@@ -53,7 +65,8 @@ deal and one web3 deal, both with their verification results recorded:
 Two scripts stand between the model and the output.
 
 `fetch_verify.py` re-fetches every cited URL and asserts the quoted string is actually
-there. It control-probes each host with a deliberately random path first, because a
+there. Each researcher runs it over its own findings before returning, and the
+orchestrator re-checks the result. It control-probes each host with a deliberately random path first, because a
 single-page app answers HTTP 200 for URLs that do not exist and ships its own "not found"
 text inside every page bundle — so neither the status code nor a content marker can be
 trusted. It separates `blocked` from `not-found`, because bot protection is not absence

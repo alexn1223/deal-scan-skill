@@ -1,0 +1,8 @@
+{
+  "name": "deal-scan",
+  "description": "Desk research on a startup deal — market, competitors, geography, company existence and founder verification — returned as a dossier in which every line carries a verbatim quote and a live URL. Renders no verdicts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Alex Nykonovych"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "run": {
+    "target": "Obriy AI",
+    "branch": "equity",
+    "tier": 0,
+    "gear": "scan",
+    "started_at": "2026-09-17T09:00:00Z",
+    "fetch_count": 25,
+    "verified_at": "2026-09-17T08:51:11Z"
+  },
+  "claims": [
+    {
+      "id": "c1",
+      "block": "existence",
+      "statement": "Trades as Obriy AI.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "© 2026 Obriy AI. All rights reserved.",
+          "fetched_at": "2026-09-17T09:02:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5450
+          },
+          "verified_at": "2026-09-17T08:51:03Z"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "block": "funding",
+      "statement": "Pre-seed round of $500,000 from N1 Investment Company, reported April 2026.",
+      "sources": [
+        {
+          "url": "https://www.vestbee.com/insights/articles/obriy-ai-lands-500k",
+          "quote": "raised $500,000 from N1 Investment Company in a pre-seed round",
+          "fetched_at": "2026-09-17T09:05:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5233
+          },
+          "verified_at": "2026-09-17T08:51:04Z"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "block": "funding",
+      "statement": "The named investor lists the company on its own portfolio page.",
+      "sources": [
+        {
+          "url": "https://n1invest.co/portfolio",
+          "quote": "Obriy AI",
+          "fetched_at": "2026-09-17T09:08:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 561
+          },
+          "verified_at": "2026-09-17T08:51:06Z"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "block": "people",
+      "statement": "Viacheslav Shestakovsky is given the title CEO & Co-founder.",
+      "sources": [
+        {
+          "url": "https://tech.eu/2026/04/14/obriy-ai-raises-500k-to-take-multi-agent-enterprise-automation-global/",
+          "quote": "Viacheslav Shestakovsky, CEO & Co-founder, Obriy AI",
+          "fetched_at": "2026-09-17T09:11:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 6434
+          },
+          "verified_at": "2026-09-17T08:51:07Z"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "block": "traction",
+      "statement": "A published pilot with Ukraine's GovTech Lab programme and the Ministry of Justice.",
+      "sources": [
+        {
+          "url": "https://tech.eu/2026/04/14/obriy-ai-raises-500k-to-take-multi-agent-enterprise-automation-global/",
+          "quote": "Obriy AI was selected to pilot its technology within Ukraine’s GovTech Lab programme",
+          "fetched_at": "2026-09-17T09:11:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 6434
+          },
+          "verified_at": "2026-09-17T08:51:08Z"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "block": "traction",
+      "statement": "Four case studies are published. None of them names the client.",
+      "sources": [
+        {
+          "url": "https://obriy.ai/",
+          "quote": "Ukraine's largest grocery chain changed nothing in its contact centre.",
+          "fetched_at": "2026-09-17T09:02:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5450
+          },
+          "verified_at": "2026-09-17T08:51:09Z"
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "block": "market",
+      "statement": "One vendor report puts the AI-driven customer support agents market at $2.5B in 2024 reaching $53.3B by 2034.",
+      "sources": [
+        {
+          "url": "https://market.us/report/ai-driven-customer-support-agents-market/",
+          "quote": "growing at a CAGR of 35.80% during the forecast period from 2025 to 2034",
+          "fetched_at": "2026-09-17T09:20:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 31193
+          },
+          "verified_at": "2026-09-17T08:51:11Z"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "item": "Legal entity name and EDRPOU registration number",
+      "kind": "blocked",
+      "searched": [
+        "codeua.com (HTTP 403, bot protection)",
+        "clarity-project.info",
+        "opendatabot.ua"
+      ]
+    },
+    {
+      "item": "Domain registration date for obriy.ai",
+      "kind": "not-checkable",
+      "searched": [
+        "rdap.org (no .ai coverage)"
+      ]
+    },
+    {
+      "item": "Titles for co-founders Dmytro Nosach and Andrii Bobrov",
+      "kind": "not-found",
+      "searched": [
+        "obriy.ai",
+        "tech.eu",
+        "vestbee.com",
+        "dev.ua",
+        "techukraine.org"
+      ]
+    },
+    {
+      "item": "Headcount and pricing",
+      "kind": "not-found",
+      "searched": [
+        "obriy.ai",
+        "linkedin.com"
+      ]
+    }
+  ]
+}

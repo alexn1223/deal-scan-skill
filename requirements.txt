@@ -1,0 +1,1 @@
+# deal-scan needs nothing beyond the standard library.

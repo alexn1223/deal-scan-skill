@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "deal-scan findings",
+  "type": "object",
+  "required": ["run", "claims", "gaps"],
+  "properties": {
+    "run": {
+      "type": "object",
+      "required": ["target", "branch", "tier", "started_at", "fetch_count"],
+      "properties": {
+        "target": {"type": "string"},
+        "branch": {"enum": ["equity", "web3"]},
+        "tier": {"enum": [0, 1]},
+        "gear": {"enum": ["scan", "deep"]},
+        "started_at": {"type": "string"},
+        "verified_at": {"type": "string"},
+        "fetch_count": {"type": "integer"}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "block", "statement", "sources"],
+        "properties": {
+          "id": {"type": "string"},
+          "block": {
+            "enum": ["existence", "footprint", "people", "traction", "funding",
+                     "market", "competitors", "geography", "watchlists", "web3"]
+          },
+          "statement": {
+            "type": "string",
+            "description": "What the sources say. Never a characterisation of it."
+          },
+          "conflict": {
+            "type": "boolean",
+            "description": "True when the attached sources disagree. Disagreement is reported, never resolved."
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["url", "quote", "fetched_at", "source_class"],
+              "properties": {
+                "url": {"type": "string", "format": "uri"},
+                "quote": {
+                  "type": "string",
+                  "description": "Verbatim. Must appear at the URL, checked by fetch_verify.py."
+                },
+                "fetched_at": {"type": "string"},
+                "source_class": {
+                  "enum": ["registry", "primary-self", "primary-third", "press",
+                           "aggregator", "social", "archive"]
+                },
+                "verification": {
+                  "type": "object",
+                  "properties": {
+                    "outcome": {
+                      "enum": ["verified", "quote-not-found", "soft-404",
+                               "blocked", "not-found", "unreachable", "invalid"]
+                    },
+                    "status": {"type": ["integer", "null"]},
+                    "detail": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "kind", "searched"],
+        "properties": {
+          "item": {"type": "string"},
+          "kind": {
+            "enum": ["not-found", "blocked", "not-checkable"],
+            "description": "not-found: searched, no match. blocked: exists, unreachable. not-checkable: no public source of this kind exists for this jurisdiction."
+          },
+          "searched": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

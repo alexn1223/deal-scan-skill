@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+dist/
+.venv/
+venv/
+
+# run outputs
+inputs.yaml
+assumptions.yaml
+terms.json
+cite-report.json
+output.md
+model.xlsx
+summary.md
+thesis-draft.json
+thesis.json
+thesis.md
+thesis.manifest.json

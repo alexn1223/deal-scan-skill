@@ -1,0 +1,119 @@
+{
+  "run": {
+    "target": "Angstrom (Sorella Labs)",
+    "branch": "web3",
+    "tier": 0,
+    "gear": "scan",
+    "started_at": "2026-09-17T10:00:00Z",
+    "fetch_count": 9,
+    "verified_at": "2026-09-17T09:15:32Z"
+  },
+  "claims": [
+    {
+      "id": "w1",
+      "block": "web3",
+      "statement": "The contract at 0x0000000aa232009084Bd71A5797d089AA4Edfad4 is named Angstrom on the explorer and carries verified source.",
+      "sources": [
+        {
+          "url": "https://eth.blockscout.com/api/v2/addresses/0x0000000aa232009084bd71a5797d089aa4edfad4",
+          "quote": "0x0000000aa232009084Bd71A5797d089AA4Edfad4",
+          "fetched_at": "2026-09-17T10:02:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 726,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T09:15:29Z"
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "block": "web3",
+      "statement": "The explorer reports compiler 0.8.26 and a verification timestamp of 2025-07-28. It reports is_fully_verified as false, which is a different field from is_verified.",
+      "sources": [
+        {
+          "url": "https://eth.blockscout.com/api/v2/smart-contracts/0x0000000aa232009084bd71a5797d089aa4edfad4",
+          "quote": "0.8.26+commit.8a97fa7a",
+          "fetched_at": "2026-09-17T10:03:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 456366,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T09:15:30Z"
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "block": "web3",
+      "statement": "The creation transaction is dated 2025-07-22. Its sending account and the address the explorer records as creator are two different addresses, and the creator is itself a contract.",
+      "sources": [
+        {
+          "url": "https://eth.blockscout.com/api/v2/transactions/0x35cd06f2d4c1455ea7e1796355632b30a8ac9cf78ba100998c1ef837b078a12c",
+          "quote": "2025-07-22T02:36:23.000000Z",
+          "fetched_at": "2026-09-17T10:05:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 114968,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T09:15:31Z"
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "block": "web3",
+      "statement": "The protocol describes itself as a hybrid DEX built on Uniswap V4.",
+      "sources": [
+        {
+          "url": "https://api.llama.fi/protocol/angstrom",
+          "quote": "Angstrom is a hybrid DEX built on Uniswap V4 that uses app-level sequencing to internalize MEV",
+          "fetched_at": "2026-09-17T10:07:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 176006,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T09:15:32Z"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "item": "Security audit: named firm, date, scope and linked report",
+      "kind": "not-found",
+      "searched": [
+        "api.llama.fi (audits field reads 0, which records DefiLlama coverage rather than the protocol)",
+        "auditlabs.ai store page surfaced in search returned HTTP 404 when fetched",
+        "github.com/SorellaLabs/angstrom contents listing"
+      ]
+    },
+    {
+      "item": "Identity of the account that sent the creation transaction",
+      "kind": "not-found",
+      "searched": [
+        "eth.blockscout.com address lookup returns no name, no ENS, zero balance"
+      ]
+    },
+    {
+      "item": "Token, supply and unlock schedule",
+      "kind": "not-found",
+      "searched": [
+        "api.llama.fi/protocol/angstrom",
+        "angstrom.xyz"
+      ]
+    }
+  ]
+}

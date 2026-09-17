@@ -32,6 +32,10 @@
             "type": "string",
             "description": "What the sources say. Never a characterisation of it."
           },
+          "ring": {
+            "enum": [1, 2, 3],
+            "description": "Competitors block only. 1: does the same thing. 2: competes for the same customer by a different mechanism. 3: operates in the same field. Ring 3 is never legitimately empty."
+          },
           "conflict": {
             "type": "boolean",
             "description": "True when the attached sources disagree. Disagreement is reported, never resolved."

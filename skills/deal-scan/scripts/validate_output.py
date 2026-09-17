@@ -147,6 +147,23 @@ def main():
         if not any(quote.lower() in k or k in quote.lower() for k in known):
             fail("R7", f"quoted in dossier but absent from findings.json: {quote[:70]!r}")
 
+    # R9 — competitor rings. Skipped entirely when the block was not run.
+    comp = [c for c in claims if c.get("block") == "competitors"]
+    if comp:
+        rings = []
+        for claim in comp:
+            ring = claim.get("ring")
+            if ring not in (1, 2, 3):
+                fail("R9", f"competitor claim {claim.get('id','?')!r} carries no ring "
+                           f"(got {ring!r}); every entry is 1, 2 or 3")
+            else:
+                rings.append(ring)
+        if rings and 3 not in rings:
+            fail("R9", "ring 3 is empty. Every field has other people working in it, so "
+                       "this is evidence the field in the scope block was drawn wrongly "
+                       "— redraw it and search again. It is not a company without "
+                       "competitors.")
+
     # R8 — disclaimer present.
     if not re.search(r"^#{1,6}\s+disclaimer\b", dossier, re.I | re.M):
         fail("R8", "dossier has no Disclaimer section")
@@ -160,7 +177,7 @@ def main():
         return 1
 
     sources = sum(len(c.get("sources", [])) for c in claims)
-    print(f"PASSED — {len(claims)} claims, {sources} verified sources, 8/8 rules.")
+    print(f"PASSED — {len(claims)} claims, {sources} verified sources, 9/9 rules.")
     return 0
 
 

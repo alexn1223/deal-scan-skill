@@ -130,20 +130,46 @@ Run every block in a scan. A block that yields nothing produces gaps entries, no
    labelled as such and never written as a fact about the company. Say both back to the
    user before the competitor block runs — a wrong field produces a wrong competitor set,
    and correcting it here costs one message instead of a whole pass.
-8. **Competitors — the large players in that field, in those countries.** Size is a cited
-   number, never a label. The ban list forbids "leader" and "market leading", and that is
-   the point: "raised $340M, per Crunchbase" is checkable and "the market leader" is not.
-   Per competitor: URL, a self-description quoted from their own site, founded year,
-   funding with its source, headcount signal, public pricing, and the countries served.
-   Found five ways — the target's own comparison pages; alternatives directories;
+8. **Competitors — three rings, asked in order.** Each ring is a question with a count
+   and a named list, and each is answered separately. A ring with nothing in it is
+   reported as a count of zero against the sources searched, never as silence.
+
+   **Ring 1 — is anyone doing the same thing?** A customer could switch and have the same
+   job done the same way. Usually the shortest list, sometimes empty, and an empty Ring 1
+   is a real finding worth stating plainly.
+
+   **Ring 2 — is anyone competing for the same customer?** Same buyer and same budget,
+   different mechanism. This is where the substitute the company does not think of as a
+   competitor lives, including the spreadsheet, the agency, and the in-house build.
+
+   **Ring 3 — is anyone operating in the same field?** Widest ring, and in practice never
+   empty. It is the context the first two rings are read against.
+
+   Per competitor, in every ring: URL, a self-description **quoted from their own site**,
+   founded year, funding with its source, headcount signal, public pricing, and the
+   countries served.
+
+   **Ring assignment is a judgement, so it is shown rather than asserted.** Each entry
+   carries the two quotations it was placed on — the target's own description of what it
+   does, and the competitor's own description — so the reader can disagree with the
+   placement. No entry is assigned a ring without both.
+
+   **An empty Ring 3 fails the run.** Every field has other people working in it, so a
+   Ring 3 of zero is evidence that the field in block 7 was drawn wrongly — too narrow,
+   or in the wrong words — and the fix is to redraw it and search again. It is never
+   written up as a company having no competitors.
+
+   Found five ways: the target's own comparison pages; alternatives directories;
    competitors' comparison pages that name the target; accelerator batchmates; and a
    direct search for the field **within each country, in that country's language** where
-   it is not English, which is how regional incumbents surface that no English-language
-   directory carries. Also: who exists in that field and those countries that the target
-   does not mention, and recent acquisitions or shutdowns in the category. Where a
-   published market-share figure exists it is quoted with the firm that published it and
-   the date, handled exactly as sizing is in block 6. Where none exists, which is usual,
-   say so rather than substituting an impression of who is big.
+   it is not English, which is how regional players surface that no English-language
+   directory carries.
+
+   Size is a cited number, never a label — "raised $340M, per Crunchbase", not "the
+   largest". Published market-share figures are quoted with the firm that published them
+   named, handled exactly as sizing is in block 6. Also recorded: who exists in the field
+   and the countries that the target does not mention, and recent acquisitions or
+   shutdowns in the category.
 
 9. **Web3** — run only if the deal has a token, contract or chain. Endpoints and their
     traps are in `references/web3-sources.md`; all of it is reachable at tier 0 with no

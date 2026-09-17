@@ -55,7 +55,7 @@ heading hides the fact that nothing was found.
 A claim with several sources carries several quote lines. A claim with `conflict: true`
 renders under a "N sources disagree" label with every source shown and no resolution.
 
-## The eight rules
+## The nine rules
 
 | Rule | Requirement |
 |---|---|
@@ -67,6 +67,13 @@ renders under a "N sources disagree" label with every source shown and no resolu
 | R6 | `gaps.md` exists, is populated, and labels entries `not-found` / `blocked` / `not-checkable` |
 | R7 | Every dossier quotation traces to a source in `findings.json` |
 | R8 | The disclaimer section is present |
+| R9 | Every competitor claim carries a ring of 1, 2 or 3, and ring 3 is not empty |
+
+R9 deserves a note too. Ring 3 — anyone operating in the same field — is never
+legitimately empty, so a run that finds nobody there has almost certainly defined the
+field wrongly in the scope block rather than discovered a company with no competitors.
+The rule fails the run and points back at the scope definition. R9 is skipped entirely
+when the competitor block was not run, so a partial scan is not punished for it.
 
 R6 deserves a note. A scan that resolved everything is a scan that did not look hard
 enough — every real company has something the public record does not carry. An empty

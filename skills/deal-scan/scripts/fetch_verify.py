@@ -124,17 +124,34 @@ def fingerprint(text, markup=True):
     return {"len": len(norm), "sha": hashlib.sha256(norm.encode()).hexdigest()[:16]}
 
 
-def control_probe(host_url, cache):
-    """Fingerprint a deliberately absent path on this host, once per host."""
-    host = urlparse(host_url).netloc
+def host_profile(host_url, cache):
+    """Fingerprint an absent path AND the root, once per host.
+
+    A client-rendered app serves one identical shell for every path, including
+    absent ones — so on such a host the control probe cannot tell a live page
+    from a dead one, and naively treating "matches control" as dead condemns
+    the real homepage. Probing the root settles which world we are in: if the
+    root is byte-identical to a deliberately absent path, the host is an SPA
+    and its control probe is uninformative rather than damning.
+    """
+    parts = urlparse(host_url)
+    host = parts.netloc
     if host in cache:
         return cache[host]
     nonce = "".join(random.choices(string.ascii_lowercase + string.digits, k=12))
-    probe = f"{urlparse(host_url).scheme}://{host}/zzz-deal-scan-{nonce}"
+    probe = f"{parts.scheme}://{host}/zzz-deal-scan-{nonce}"
     status, text, err, ctype = fetch(probe)
-    cache[host] = (None if err or not text
-                   else fingerprint(text, is_markup(text, ctype)))
+    control = None if err or not text else fingerprint(text, is_markup(text, ctype))
     time.sleep(PAUSE)
+
+    spa = False
+    if control:
+        rs, rt, rerr, rct = fetch(f"{parts.scheme}://{host}/")
+        time.sleep(PAUSE)
+        if not rerr and rt:
+            spa = fingerprint(rt, is_markup(rt, rct))["sha"] == control["sha"]
+
+    cache[host] = {"control": control, "spa": spa}
     return cache[host]
 
 
@@ -153,7 +170,9 @@ def verify_source(src, cache):
     if not quote:
         return {"outcome": "invalid", "detail": "source has no quote"}
 
-    control = control_probe(url, cache)
+    prof = host_profile(url, cache)
+    control, spa = prof["control"], prof["spa"]
+    is_root = urlparse(url).path in ("", "/")
     status, text, err, ctype = fetch(url)
     time.sleep(PAUSE)
     markup = is_markup(text, ctype)
@@ -167,15 +186,20 @@ def verify_source(src, cache):
         return {"outcome": "not-found", "status": status}
 
     fp = fingerprint(text, markup)
-    if control and fp["sha"] == control["sha"]:
+    if control and fp["sha"] == control["sha"] and not (spa or is_root):
         return {"outcome": "soft-404", "status": status,
                 "detail": f"byte-identical to control probe ({fp['len']} chars)"}
 
     page = normalise(text, markup)
     want = _WS.sub(" ", html.unescape(quote) if markup else quote).strip()
     if want.lower() in page.lower():
-        return {"outcome": "verified", "status": status, "chars": fp["len"],
-                "body": "markup" if markup else "data"}
+        result = {"outcome": "verified", "status": status, "chars": fp["len"],
+                  "body": "markup" if markup else "data"}
+    if spa:
+        result["liveness"] = ("undetermined — client-rendered host serves one "
+                              "shell for every path, so a dead sub-path cannot "
+                              "be distinguished from a live one")
+    return result
 
     # Quote absent. Report the longest prefix that IS present, to show how far it got.
     best = 0

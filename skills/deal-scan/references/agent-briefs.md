@@ -54,6 +54,16 @@ placeholder left in it is a brief that researches the wrong company.
 >      "gaps": [{"item": "...", "kind": "not-found|blocked|not-checkable",
 >                "searched": ["..."]}]}
 >
+> **Put quotations in `sources`, not in `statement`.** A quoted span inside a statement
+> must also appear verbatim in one of that claim's own sources, or the run fails — because
+> the ban lists exempt quotations and cannot otherwise tell a quotation from the same words
+> written in your own voice. The simplest way to comply is to keep statements free of
+> quotation marks entirely.
+>
+> Watch the size and hedge words in your own sentences: `only 3 roles` is a verdict wearing
+> a number's clothes, and `3 roles` is a fact. The same goes for largest, major, dominant,
+> significant, just, merely, however and appears to.
+>
 > `statement` is what the sources say, never a characterisation of it. `kind` matters:
 > `blocked` means the source exists and you could not reach it; `not-checkable` means no
 > public source of this kind exists for this jurisdiction. Neither is `not-found`.

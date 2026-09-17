@@ -1,0 +1,1862 @@
+{
+  "run": {
+    "target": "Occam Industries",
+    "branch": "equity",
+    "tier": 0,
+    "gear": "scan",
+    "started_at": "2026-09-17T12:00:00Z",
+    "fetch_count": 154,
+    "verified_at": "2026-09-17T11:50:52Z"
+  },
+  "claims": [
+    {
+      "id": "sc1",
+      "block": "scope",
+      "researcher": "orchestrator",
+      "statement": "Working definition of the field, from the company's own site: European defence technology, tactical autonomy and machine vision.",
+      "sources": [
+        {
+          "url": "https://occam.industries/",
+          "quote": "Occam Industries — European defence technology. Tactical autonomy, machine vision, and scalable operational capability.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 579,
+            "body": "markup",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:48:03Z"
+        }
+      ]
+    },
+    {
+      "id": "sc2",
+      "block": "scope",
+      "researcher": "orchestrator",
+      "statement": "Working definition of the countries: the United Kingdom as the registered seat, Ukraine as the deployment market, wider Europe as the stated supply position.",
+      "sources": [
+        {
+          "url": "https://occam.industries/",
+          "quote": "Sole European supplier to the Ukrainian front line.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 579,
+            "body": "markup",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:48:04Z"
+        }
+      ]
+    },
+    {
+      "id": "co1",
+      "block": "existence",
+      "statement": "The registered legal entity is OCCAM INDUSTRIES LTD, company number 16515234, a private limited company.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234",
+          "quote": "Company number 16515234",
+          "fetched_at": "2026-09-17T11:20:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2396,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:07Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co2",
+      "block": "existence",
+      "statement": "Companies House records incorporation on 12 June 2025. Press reports the company as established in 2024.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234",
+          "quote": "Company status Active Company type Private limited Company Incorporated on 12 June 2025",
+          "fetched_at": "2026-09-17T11:20:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2396,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:07Z"
+        },
+        {
+          "url": "https://www.vestbee.com/insights/articles/occam-closes-3-m",
+          "quote": "Occam Industries, established in 2024 by Gui Wainwright, develops",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 7746,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:11Z"
+        }
+      ],
+      "researcher": "company",
+      "conflict": true
+    },
+    {
+      "id": "co3",
+      "block": "existence",
+      "statement": "The company's registered office address is 128 City Road, London, England, EC1V 2NX.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234",
+          "quote": "Registered office address 128 City Road, London, England, EC1V 2NX",
+          "fetched_at": "2026-09-17T11:20:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2396,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:12Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co4",
+      "block": "existence",
+      "statement": "The company's registered nature of business (SIC code) is 58290 - Other software publishing.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234",
+          "quote": "Nature of business (SIC) 58290 - Other software publishing",
+          "fetched_at": "2026-09-17T11:20:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2396,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:13Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co5",
+      "block": "existence",
+      "statement": "OCCAM INDUSTRIES LTD was originally incorporated under a different name, CAKESHOP AI LIMITED, and traded under that name from 12 June 2025 until 21 August 2025.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234",
+          "quote": "Previous company names Name Period CAKESHOP AI LIMITED 12 Jun 2025 - 21 Aug 2025",
+          "fetched_at": "2026-09-17T11:20:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2396,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:14Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co6",
+      "block": "existence",
+      "statement": "Current registered director Daniil Bash (Dr) was appointed 1 October 2025, correspondence address 128 City Road, London, England, EC1V 2NX, nationality Ukrainian.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/officers",
+          "quote": "BASH, Daniil, Dr Correspondence address 128 City Road, London, England, EC1V 2NX Role Active Director Date of birth October 1994 Appointed on 1 October 2025 Nationality Ukrainian",
+          "fetched_at": "2026-09-17T11:22:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2922,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:14Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co7",
+      "block": "existence",
+      "statement": "Current registered director Guiam Edward Wainwright was appointed 12 June 2025, correspondence address 128 City Road, London, England, EC1V 2NX, nationality British, Irish, and is also the sole active person with significant control (PSC), notified 12 June 2025.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/officers",
+          "quote": "WAINWRIGHT, Guiam Edward Correspondence address 128 City Road, London, England, EC1V 2NX Role Active Director Date of birth September 1985 Appointed on 12 June 2025 Nationality British,Irish",
+          "fetched_at": "2026-09-17T11:22:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2922,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:15Z"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/persons-with-significant-control",
+          "quote": "Guiam Edward Wainwright Active Correspondence address 128 City Road, London, England, EC1V 2NX Notified on 12 June 2025 Date of birth September 1985 Nationality British,Irish",
+          "fetched_at": "2026-09-17T11:24:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2911,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:16Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co8",
+      "block": "existence",
+      "statement": "Aniketh Ramesh was a registered director, appointed 12 June 2025 with a correspondence address at Techspace Antler, 32-38 Leman Street, London, England, E1 8EW, and resigned 26 January 2026.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/officers",
+          "quote": "RAMESH, Aniketh Correspondence address Techspace Antler, 32-38 Leman Street, London, England, E1 8EW Role Resigned Director Date of birth July 1994 Appointed on 12 June 2025 Resigned on 26 January 2026 Nationality Indian",
+          "fetched_at": "2026-09-17T11:22:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 2922,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:17Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co9",
+      "block": "existence",
+      "statement": "Companies House filing history records SH01 statement-of-capital filings for share allotments on 1 October 2025 (GBP 3.2), 18 November 2025 (GBP 3.6), and 27 August 2026 (GBP 3.6), followed by an SH06 cancellation-of-shares statement of capital on 27 August 2026 (GBP 2.10).",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/filing-history",
+          "quote": "04 Dec 2025 SH01 Statement of capital following an allotment of shares on 18 November 2025 GBP 3.6",
+          "fetched_at": "2026-09-17T11:26:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8291,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:18Z"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/filing-history",
+          "quote": "02 Sep 2026 SH01 Statement of capital following an allotment of shares on 27 August 2026 GBP 3.6",
+          "fetched_at": "2026-09-17T11:26:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8291,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:20Z"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/filing-history",
+          "quote": "09 Sep 2026 SH06 Cancellation of shares. Statement of capital on 27 August 2026 GBP 2.10",
+          "fetched_at": "2026-09-17T11:26:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8291,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:21Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co10",
+      "block": "existence",
+      "statement": "The company's most recent confirmation statement was made on 11 June 2026, filed 18 June 2026.",
+      "sources": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/16515234/filing-history",
+          "quote": "18 Jun 2026 CS01 Confirmation statement made on 11 June 2026 with updates",
+          "fetched_at": "2026-09-17T11:26:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8291,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:22Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co11",
+      "block": "footprint",
+      "statement": "The domain occam.industries was registered on 2025-08-20, i.e. after the company's 12 June 2025 incorporation but nine days after its 21 August 2025 rename from Cakeshop AI Limited (registered one day earlier, on RDAP data), with nameservers on Cloudflare.",
+      "sources": [
+        {
+          "url": "https://rdap.identitydigital.services/rdap/domain/occam.industries",
+          "quote": "\"eventAction\": \"registration\", \"eventDate\": \"2025-08-20T17:40:48.957Z\"",
+          "fetched_at": "2026-09-17T11:31:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 6069,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:48:23Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co12",
+      "block": "footprint",
+      "statement": "crt.sh certificate transparency records show the earliest TLS certificate for occam.industries with a not_before date of 2025-08-20, and active subdomains including compass.occam.industries, app.tm-dev.occam.industries, tm.dev1.occam.industries and www.occam.industries.",
+      "sources": [
+        {
+          "url": "https://crt.sh/?q=occam.industries&output=json",
+          "quote": "\"common_name\":\"compass.occam.industries\",\"name_value\":\"compass.occam.industries\"",
+          "fetched_at": "2026-09-17T11:15:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 22157,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:48:39Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co14",
+      "block": "footprint",
+      "statement": "occam.industries' robots.txt allows all crawling.",
+      "sources": [
+        {
+          "url": "https://occam.industries/robots.txt",
+          "quote": "User-agent: *\nAllow: /",
+          "fetched_at": "2026-09-17T11:27:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 22,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:48:39Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co16",
+      "block": "footprint",
+      "statement": "occam.industries' MX records route mail through Google Workspace (aspmx.l.google.com and alternates), and its DNS TXT/SPF record whitelists both Google and Greenhouse.io (applicant tracking system) as authorized senders.",
+      "sources": [
+        {
+          "url": "https://dns.google/resolve?name=occam.industries&type=MX",
+          "quote": "\"data\":\"1 aspmx.l.google.com.\"",
+          "fetched_at": "2026-09-17T11:33:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 590,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:48:42Z"
+        },
+        {
+          "url": "https://dns.google/resolve?name=occam.industries&type=TXT",
+          "quote": "\"data\":\"v=spf1 include:_spf.google.com include:mg-spf.greenhouse.io -all\"",
+          "fetched_at": "2026-09-17T11:33:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 502,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:48:42Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co17",
+      "block": "funding",
+      "statement": "EU-Startups (press, 11 Feb 2026) reports Occam Industries raised a €3 million (£2.6 million) pre-Seed round led by Presto Tech Horizons, with participation from Antler, US-based Freedom Fund, and Copenhagen-based dual-use investor TYR.vc, plus a group of defence and security industry angels.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "Occam Industries , a London-based DefenceTech startup with a focus on autonomous drone operations, has raised a €3 million (£2.6 million) pre-Seed round.",
+          "fetched_at": "2026-09-17T11:40:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:46Z"
+        },
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "The pre-Seed round also included an international consortium of investors, with participation from Antler, US-based Freedom Fund, and Copenhagen-based dual-use investor TYR.vc , and a group of defence and security industry angels.",
+          "fetched_at": "2026-09-17T11:40:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:46Z"
+        }
+      ],
+      "researcher": "company",
+      "conflict": true
+    },
+    {
+      "id": "co18",
+      "block": "funding",
+      "statement": "Startupmag headlines the same round as £2.6m ('Occam raises £2.6m pre-seed startup funding'), matching the sterling figure in the EU-Startups piece.",
+      "sources": [
+        {
+          "url": "https://www.startupmag.co.uk/funding/occam-2026-pre-seed-funding/",
+          "quote": "Occam raises £2.6m pre-seed startup funding | Startupmag | Startupmag",
+          "fetched_at": "2026-09-17T11:42:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 13627,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:49Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co19",
+      "block": "funding",
+      "statement": "Aggregator MapCo records the round in dollar terms as $3.24M, dated Feb 11, and separately lists 'Czechoslovak Group' as a selected investor alongside Presto Tech Horizons, Antler, Freedom Fund and Tyr.vc (the EU-Startups piece instead describes Czechoslovak Group/CSG as the industrial partner backing lead investor Presto Tech Horizons, not as a separate participant).",
+      "sources": [
+        {
+          "url": "https://www.mapco.ai/company/occam-industries",
+          "quote": "Occam Industries raised $3.24M — Defense & Security funding & jobs | MapCo",
+          "fetched_at": "2026-09-17T11:44:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4288,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:51Z"
+        },
+        {
+          "url": "https://www.mapco.ai/company/occam-industries",
+          "quote": "Selected investors 💰: Presto Tech Horizons , Antler , Freedom Fund , Tyr.vc , Czechoslovak Group",
+          "fetched_at": "2026-09-17T11:44:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4288,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:52Z"
+        }
+      ],
+      "researcher": "company",
+      "conflict": true
+    },
+    {
+      "id": "co20",
+      "block": "funding",
+      "statement": "Presto Tech Horizons' own site (techhorizons.eu, the Presto Ventures / CSG resilience-tech fund page) lists Occam Industries as a portfolio company, tagged 'Spatial AI', country 'UK', and investment year '12/2025' (December 2025) — a month earlier than the February 2026 press-reported announcement date.",
+      "sources": [
+        {
+          "url": "https://www.techhorizons.eu/",
+          "quote": "Occam Industries",
+          "fetched_at": "2026-09-17T11:50:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 12746,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:54Z"
+        },
+        {
+          "url": "https://www.techhorizons.eu/",
+          "quote": "12/2025",
+          "fetched_at": "2026-09-17T11:50:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 12746,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:55Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "co21",
+      "block": "funding",
+      "statement": "Antler's own blog states that Occam (OCCAM) was born out of an Antler residency, and profiles founder Guiam Wainwright as its founder.",
+      "sources": [
+        {
+          "url": "https://www.antler.co/blog/building-autonomous-ai-for-europes-frontlines-the-further-faster-podcast",
+          "quote": "OCCAM was born out of an Antler residency.",
+          "fetched_at": "2026-09-17T11:48:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8153,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:48:59Z"
+        },
+        {
+          "url": "https://www.antler.co/blog/building-autonomous-ai-for-europes-frontlines-the-further-faster-podcast",
+          "quote": "When Guiam Wainwright, founder of OCCAM, began donating time to support the tech-needs of the Ukrainian frontline",
+          "fetched_at": "2026-09-17T11:48:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8153,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:00Z"
+        }
+      ],
+      "researcher": "company"
+    },
+    {
+      "id": "pe4",
+      "block": "people",
+      "statement": "Press (itkey.media) names the company's founders and their titles as Gui Wainwright (CEO) and Daniil Bash (COO).",
+      "sources": [
+        {
+          "url": "https://itkey.media/tech-horizons-leads-eur-3m-investment-into-uks-occam-industries-brave1-endorsed-drone-autonomy/",
+          "quote": "Occam Industries was started by Gui Wainwright (CEO) and Daniil Bash (COO).",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 17133,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:05Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe6",
+      "block": "people",
+      "statement": "Press (itkey.media, quoting/paraphrasing) describes Wainwright's prior career as spanning 20 years in AI and robotics including a large robotics program at Ocado, plus early-career work supporting NATO with ML projects in conflict areas.",
+      "sources": [
+        {
+          "url": "https://itkey.media/tech-horizons-leads-eur-3m-investment-into-uks-occam-industries-brave1-endorsed-drone-autonomy/",
+          "quote": "as well as supporting NATO with ML projects early in his career in conflict areas.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 17133,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:06Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe7",
+      "block": "people",
+      "statement": "Antler's own blog (publisher of the founder's accelerator cohort) states Wainwright previously worked at Cambridge Analytica (in its earlier years) and at Ocado, prior to founding Occam.",
+      "sources": [
+        {
+          "url": "https://www.antler.co/blog/building-autonomous-ai-for-europes-frontlines-the-further-faster-podcast",
+          "quote": "Cambridge Analytica (during its earlier years), to Ocado",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8153,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:07Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe8",
+      "block": "people",
+      "statement": "Antler's blog quotes Wainwright describing Occam as his third company founding. His earlier ventures are not named there.",
+      "sources": [
+        {
+          "url": "https://www.antler.co/blog/building-autonomous-ai-for-europes-frontlines-the-further-faster-podcast",
+          "quote": "risk my life for. That's the level of obsession that I think founders need to get to.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 8153,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:07Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe9",
+      "block": "people",
+      "statement": "Press (Pathfounders) states Wainwright co-founded Occam alongside COO Daniil Bash, whom he met on the first day of the Antler accelerator programme, where Bash (wearing a 'slava Ukraine' t-shirt) stood and applauded Wainwright's pitch.",
+      "sources": [
+        {
+          "url": "https://pathfounders.com/p/occam-raises-3m-autonomous-drones-ukraine-frontline",
+          "quote": "Wainwright co-founded Occam alongside COO Daniil Bash, whom he met on day one of Antler. Wainwright arrived with a single black slide bearing white text: ‘War is here’.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 10652,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:11Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe10",
+      "block": "people",
+      "statement": "Press (Pathfounders) names a third co-founder/senior hire, CTO Aniketh Ramesh, who joined after meeting Wainwright at a defence hackathon; Wainwright's own career is described as starting with supporting NATO troops with AI/ML, founding multiple startups, and helping lead AI and robotics at Ocado.",
+      "sources": [
+        {
+          "url": "https://pathfounders.com/p/occam-raises-3m-autonomous-drones-ukraine-frontline",
+          "quote": "defence hackathon. Wainwright himself brings a background spanning startups and machine learning, starting off his career supporting NATO troops with AI and ML, founding multiple startups and helping lead AI and robotics at Ocado.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 10652,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:12Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe11",
+      "block": "people",
+      "statement": "Aniketh Ramesh's own site states he has wrapped up as CTO of Occam Industries, and separately states a PhD at the Extreme Robotics Lab, University of Birmingham.",
+      "sources": [
+        {
+          "url": "https://anikethramesh.github.io/",
+          "quote": "wrapped up as CTO of Occam Industries, a hyper-growth defence tech startup that is currently deploying autonomous AI pilots for UAVs.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 1590,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:14Z"
+        },
+        {
+          "url": "https://anikethramesh.github.io/",
+          "quote": "Extreme Robotics Lab, University of Birmingham - researching how robots, AIs and humans can work as actual teams.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 1590,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:15Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe14",
+      "block": "people",
+      "statement": "CEO Gui Wainwright is quoted in press (Vestbee) as 'co-founder and CEO of Occam' describing the company's engineering philosophy: 'Every assumption is tested under pressure: latency, reliability, operator load, decision-making. What we build at Occam is shaped by that reality and then honed in combat conditions.'",
+      "sources": [
+        {
+          "url": "https://www.vestbee.com/insights/articles/occam-closes-3-m",
+          "quote": "Every assumption is tested under pressure: latency, reliability, operator load, decision-making. What we build at Occam is shaped by that reality and then honed in combat conditions.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 7746,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:16Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe15",
+      "block": "people",
+      "statement": "Press quotes the CEO on the company's origin, describing it as starting from a handful of people rather than as a company or a pitch.",
+      "sources": [
+        {
+          "url": "https://itkey.media/tech-horizons-leads-eur-3m-investment-into-uks-occam-industries-brave1-endorsed-drone-autonomy/",
+          "quote": "Occam did not start as a company, a solution or a pitch. It was just a handful of people who wanted to help.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 17133,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:16Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe16",
+      "block": "people",
+      "statement": "Occam Industries' own careers site (Greenhouse job board) lists 6 open roles at the time of research: Chief Engineer (Kyiv), Pilot Engineer (Kyiv), Hardware Interface Engineer (Kyiv), Test Pilot (Kyiv), Founding Talent Associate (Kyiv), and QA Lead / QA Coordinator (Kyiv), plus a general/speculative application listing for London, Kyiv or Tallinn.",
+      "sources": [
+        {
+          "url": "https://job-boards.eu.greenhouse.io/occamindustries",
+          "quote": "Chief Engineer",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 593,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:21Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pe17",
+      "block": "people",
+      "statement": "A third-party job aggregator lists 3 open roles for Occam Industries, against the 7 on the company's own Greenhouse board.",
+      "sources": [
+        {
+          "url": "https://freehire.me/companies/occam-industries",
+          "quote": "QA Lead / QA Coordinator",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5320,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:23Z"
+        }
+      ],
+      "researcher": "people"
+    },
+    {
+      "id": "pr3",
+      "block": "traction",
+      "statement": "Occam Industries describes itself, in the text embedded in its site's own script bundle, as a European defence technology company focused on tactical autonomy, machine vision and scalable operational capability.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "Occam Industries is a European defence technology company focused on tactical autonomy, machine vision and scalable operational capability.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:24Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr4",
+      "block": "traction",
+      "statement": "Occam Industries states on its own site that it is the first European supplier fully integrated into Ukrainian OEMs, and that its capability is built and tested against operational lessons from Ukraine.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "We are proud to be the first European supplier fully integrated into Ukrainian OEMs, built and tested against operational lessons from Ukraine. Our capability continues to evolve in line with frontline tactical adaptation and emerging operational requirements, and we continue to forge ever-deeper relationships with our partners as conflict continues and conditions evolve.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:25Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr5",
+      "block": "traction",
+      "statement": "Occam Industries states its product strategy is platform-agnostic: no favoured drone platform, but integration across the modern battlefield ecosystem.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "We have taken this approach because we believe the future battlefield will not be defined by a single platform, but by adaptable capability integrated at scale. Therefore we have no favoured platform, but instead aim to integrate across the modern battlefield ecosystem.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:26Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr6",
+      "block": "traction",
+      "statement": "Occam Industries states it has a permanently deployed presence in Ukraine and designs its autonomy systems to operate across diverse platforms, operational environments and mission requirements.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "We have a permanently deployed presence in Ukraine and design our adaptable autonomy systems to operate across diverse platforms, operational environments and mission requirements.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:27Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr7",
+      "block": "traction",
+      "statement": "Occam Industries' site lists four self-described capability pillars, including hardware-agnostic OEM integration and scalable, low-cost, deployable capability.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "[02] HARDWARE AGNOSTIC\",kind:\"title\"},{text:\"Designed to integrate across diverse OEM platforms and system architectures.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:28Z"
+        },
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "[04] DEPLOYABLE AT SCALE\",kind:\"title\"},{text:\"Focused on scalable, low-cost and operationally deployable capability.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:29Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr8",
+      "block": "traction",
+      "statement": "The company's careers copy states its autonomy is tested in the field rather than the laboratory, and gives careers@occam.industries as the contact.",
+      "sources": [
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "We build autonomy that is proven in the field, not the laboratory. If you want to keep building — under real-world conditions, with a team shipping to the front line — these are the roles open right now.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:35Z"
+        },
+        {
+          "url": "https://occam.industries/assets/index-BnkX0ora.js",
+          "quote": "careers@occam.industries",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 368774,
+            "body": "data",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:49:35Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr9",
+      "block": "traction",
+      "statement": "Occam Industries' public Greenhouse job board lists seven open roles (Chief Engineer, Founding Talent Associate, Hardware Interface Engineer, Pilot Engineer, QA Lead/QA Coordinator, Test Pilot, plus a general/open application), located in Kyiv, Ukraine and 'London, Kyiv or Tallinn'.",
+      "sources": [
+        {
+          "url": "https://boards-api.greenhouse.io/v1/boards/occamindustries/jobs",
+          "quote": "\"title\":\"Chief Engineer\"",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4238,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:49:40Z"
+        },
+        {
+          "url": "https://boards-api.greenhouse.io/v1/boards/occamindustries/jobs",
+          "quote": "\"location\":{\"name\":\"London, Kyiv or Tallinn\"}",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4238,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:49:41Z"
+        },
+        {
+          "url": "https://boards-api.greenhouse.io/v1/boards/occamindustries/jobs",
+          "quote": "\"total\":7",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4238,
+            "body": "data"
+          },
+          "verified_at": "2026-09-17T11:49:41Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr10",
+      "block": "traction",
+      "statement": "Press reporting states that Occam-X (also styled OccamX) is a flagship product using computer vision for perception, tracking and guidance, letting existing mass-produced drone platforms operate with reduced human control and lower operator training requirements.",
+      "sources": [
+        {
+          "url": "https://itkey.media/tech-horizons-leads-eur-3m-investment-into-uks-occam-industries-brave1-endorsed-drone-autonomy/",
+          "quote": "Its flagship product Occam-X uses computer vision for perception, tracking, and guidance, allowing existing mass-produced drone platforms to operate with reduced human control and lower operator training requirements.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 17133,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:42Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr11",
+      "block": "traction",
+      "statement": "Press reporting describes OccamX as a retrofit, computer-vision-enabled autopilot designed specifically for FPV drones.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "OccamX, a retrofit computer vision-enabled autopilot designed specifically for FPV drones.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:43Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr12",
+      "block": "traction",
+      "statement": "Press reporting states Occam has completed assessment as fit for integration testing by Ukraine's DefenceTech cluster Brave1.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "It has also completed assessment as fit for integration testing by the Ukrainian DefenceTech cluster Brave1.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:44Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr13",
+      "block": "traction",
+      "statement": "Brave1's own CEO, Andrii Hrytseniuk, is quoted (via press coverage of Occam's raise) saying Brave1 values that British technology companies like Occam are working directly with Ukraine on frontline needs -- a Brave1-side statement about Occam, not Occam's own claim.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "We highly value the fact that British technology companies like Occam are working directly with Ukraine to respond to real frontline needs",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "primary-third",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:44Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr14",
+      "block": "traction",
+      "statement": "Press reporting states Occam has strategic partnerships and collaborations underway with European defence primes looking to reinforce NATO capabilities, per the company's own statement to the press (no primes named).",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "Beyond Ukraine, Occam states that it has strategic partnerships and collaborations underway with European defence primes looking to reinforce NATO capabilities.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:45Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr15",
+      "block": "market",
+      "statement": "MarketsAndMarkets (undated, current report page accessed 2026-09-17) states the counter-UAS market size.",
+      "sources": [
+        {
+          "url": "https://www.marketsandmarkets.com/Market-Reports/counter-cuas-systems-market-4197284.html",
+          "quote": "The Global Counter-UAS System (C-UAS) Market Size was valued at USD 9.17 billion in 2026 and is projected to reach USD 29.70 billion by 2031, growing at a CAGR of 26.5% from 2026-2031.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 123268,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:48Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr16",
+      "block": "market",
+      "statement": "Straits Research (undated, current report page accessed 2026-09-17) states a materially smaller counter-UAV technologies market size than MarketsAndMarkets, illustrating the spread between vendor sizing reports.",
+      "sources": [
+        {
+          "url": "https://straitsresearch.com/report/counter-uav-technologies-market",
+          "quote": "The counter uav technologies market size is valued at USD 1.49 Billion in 2026 and is projected to reach USD 7.91 Billion by 2034, at a CAGR of 23.2% during the forecast period 2026-2034.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 18286,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:51Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr17",
+      "block": "market",
+      "statement": "DataM Intelligence (undated, current report page accessed 2026-09-17) states the military drone market size, a broader category than counter-UAS.",
+      "sources": [
+        {
+          "url": "https://www.datamintelligence.com/research-report/military-drone-market",
+          "quote": "Military Drone market reached US$ 18.3 billion in 2025 and is projected to reach US$ 66.5 billion by 2035 at 13.8% CAGR, driven by ISR, tactical UAVs, autonomy and defense modernization.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 38543,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:49:54Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr18",
+      "block": "market",
+      "statement": "Technavio (report page, forecast period 2026-2030, accessed 2026-09-17) states a much smaller absolute military drone market growth figure than DataM Intelligence, again illustrating the spread between vendor reports; note Technavio's report is sold.",
+      "sources": [
+        {
+          "url": "https://www.technavio.com/report/military-drone-market-analysis",
+          "quote": "The Military Drone Market size is expected to grow by USD 12003.1 million from 2026-2030 expanding at a CAGR of 13.6% during the forecast period.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "aggregator",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 52735,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:00Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr19",
+      "block": "market",
+      "statement": "UK export controls: an export licence is required before exporting controlled military goods, software and technology, and items on the UK dual-use list, from the United Kingdom to another country; administered by the Export Control Joint Unit (ECJU).",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/guidance/export-controls-military-goods-software-and-technology",
+          "quote": "An export licence is needed before the export of controlled military goods, software and technology and items on the UK dual-use list from the United Kingdom to another country.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 26090,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:04Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "pr20",
+      "block": "market",
+      "statement": "EU dual-use export control regime (Regulation (EU) 2021/821): the European Commission's own trade policy site defines dual-use items as goods, software and technology usable for both civilian and military applications.",
+      "sources": [
+        {
+          "url": "https://policy.trade.ec.europa.eu/help-exporters-and-importers/exporting-dual-use-items_en",
+          "quote": "Dual-use items are goods, software and technology that can be used for both civilian and military applications.",
+          "fetched_at": "2026-09-17T12:00:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 10690,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:07Z"
+        }
+      ],
+      "researcher": "product"
+    },
+    {
+      "id": "cm1",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "The Fourth Law (thefourthlaw.ai), maker of the TFL-1 terminal-guidance module fitted to Vyriy and Lupynis FPV drones in mass production for the Ukrainian front, occupies ring 1 against Occam: both describe retrofit machine-vision autonomy modules added to existing mass-produced FPV airframes.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:08Z"
+        },
+        {
+          "url": "https://thefourthlaw.ai/",
+          "quote": "The Fourth Law, Inc. is a global leader in autonomous small drones, autonomy modules, and autonomy simulations for defense.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 15090,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:11Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm2",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "Theseus (theseus.us), a US company whose Micro VPS retrofits onto existing drones via PX4 or ArduPilot integrations to give GPS-denied visual positioning, is placed in ring 1: the same job of adding computer-vision autonomy to an existing airframe without changing it.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:12Z"
+        },
+        {
+          "url": "https://www.theseus.us/technology",
+          "quote": "Theseus’s Micro VPS is designed for effortless installation, allowing quick deployment without extensive modifications or technical expertise. Integrations with PX4 or ArduPilot typically take under 30 minutes.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 4319,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:14Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm3",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "DoD Solution (dodsolution.com), an Estonian-Ukrainian startup building the AURA autonomy platform for FPV and other unmanned systems, occupies ring 1: onboard AI hardware-and-software for visual navigation and last-mile targeting retrofitted to existing drones.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:15Z"
+        },
+        {
+          "url": "https://thedefender.media/uk/2026/03/dod-solution-aura/",
+          "quote": "Основний продукт DoD Solution – модулі автономності AURA для дронів різних типів.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 13576,
+            "body": "markup",
+            "liveness": "undetermined — client-rendered host serves one shell for every path, so a dead sub-path cannot be distinguished from a live one"
+          },
+          "verified_at": "2026-09-17T11:50:19Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm4",
+      "block": "competitors",
+      "ring": 1,
+      "statement": "Tykho Zir ('Тихо Зір'), a Ukrainian computer-vision terminal-guidance module listed on the state Brave1 Market, occupies ring 1: a machine-vision module for target recognition and tracking fitted to existing UAVs and robots, the same mechanism as Occam's retrofit autonomy.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:20Z"
+        },
+        {
+          "url": "https://market-brave1.delta.mil.gov.ua/tykho-zir-avtonomne-rozpiznavannia-monitorynh-ta-analiz-tsilei/",
+          "quote": "Тихо Зір – потужний модуль комп'ютерного зору, який поєднує високопродуктивний процесор, штучний інтелект та інноваційні алгоритми обробки зображень.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "registry",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 9082,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:23Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm5",
+      "block": "competitors",
+      "ring": 2,
+      "statement": "Auterion (Skynode S), a hardware autopilot/mission-computer module marketed for small UAS including FPV, occupies ring 2 against Occam: it competes for the same defence buyer's autonomy budget but by replacing/embedding flight-controller hardware rather than dropping software onto an unchanged airframe.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:24Z"
+        },
+        {
+          "url": "https://auterion.com/product/skynode-s/",
+          "quote": "Skynode S is the compact, low-cost, chip-down controller that enables any small UAS system with the Auterion software platform.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5040,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:27Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm6",
+      "block": "competitors",
+      "ring": 2,
+      "statement": "ModalAI, a US hardware/software autopilot maker for computer-vision-based obstacle avoidance and GPS-denied navigation, occupies ring 2: same defence/robotics buyer, but the mechanism is a purpose-built onboard computer-vision hardware platform (VOXL) rather than a pure software retrofit.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:28Z"
+        },
+        {
+          "url": "https://www.modalai.com/",
+          "quote": "ModalAI develops sUAS, drone and robotics autonomous computer vision, flight control and communications systems, and manufactures in the USA.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 12430,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:31Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm7",
+      "block": "competitors",
+      "ring": 2,
+      "statement": "Swarmer, a Ukrainian software company that coordinates fleets of drones/robots into autonomous multi-vehicle missions and is integrated with the Delta situational-awareness system, occupies ring 2: same defence buyer and budget as Occam, but the mechanism is multi-drone swarm mission orchestration rather than single-drone terminal computer vision.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:31Z"
+        },
+        {
+          "url": "https://www.army-technology.com/news/swarmer-funding-uncrewed-vehicles/",
+          "quote": "software-only solution, which is designed to be compatible with various hardware platforms",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 12758,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:35Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm8",
+      "block": "competitors",
+      "ring": 2,
+      "statement": "Quantum Systems (Vector AI), a German full-stack ISR drone maker whose Vector platform flies and targets visually and completes missions autonomously under jamming, occupies ring 2: it bundles its own onboard autonomy into a manufactured airframe sold to the same defence buyers, rather than selling autonomy software to retrofit onto third-party mass-produced drones.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:36Z"
+        },
+        {
+          "url": "https://quantum-systems.com/",
+          "quote": "The Future is Unmanned - for defense, security and geospatial applications worldwide.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 5641,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:39Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm9",
+      "block": "competitors",
+      "ring": 3,
+      "statement": "TEKEVER, a Portuguese defence-tech company building its own long-endurance fixed-wing ISR unmanned aerial systems with AI-driven autonomy, occupies ring 3: it operates in the same wider field of defence drone autonomy but sells complete ISR aircraft and data services to defence customers, a different product category and mechanism from Occam's FPV retrofit software.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:39Z"
+        },
+        {
+          "url": "https://www.tekever.com/",
+          "quote": "Leading the future of AI-driven autonomy across civil and defence missions.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 6727,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:49Z"
+        }
+      ],
+      "researcher": "competitors"
+    },
+    {
+      "id": "cm10",
+      "block": "competitors",
+      "ring": 3,
+      "statement": "Anduril Industries, a US company building advanced autonomous systems and defence technology broadly (AI, robotics, software-defined weapons), occupies ring 3: same wide field of defence autonomy, but its product line (Lattice OS, large autonomous platforms, munitions) is a different mechanism and different customer motion than Occam's retrofit software for mass-produced FPV drones.",
+      "sources": [
+        {
+          "url": "https://www.eu-startups.com/2026/02/london-based-defencetech-startup-occam-raises-e3-million-to-support-frontline-drone-autonomy-in-ukraine/",
+          "quote": "a retrofit computer vision-enabled autopilot designed specifically for FPV drones",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "press",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 11079,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:49Z"
+        },
+        {
+          "url": "https://www.anduril.com/",
+          "quote": "Anduril Industries builds advanced autonomous systems and defense technology to protect US and allied forces.",
+          "fetched_at": "2026-09-17T00:00:00Z",
+          "source_class": "primary-self",
+          "verification": {
+            "outcome": "verified",
+            "status": 200,
+            "chars": 3009,
+            "body": "markup"
+          },
+          "verified_at": "2026-09-17T11:50:52Z"
+        }
+      ],
+      "researcher": "competitors"
+    }
+  ],
+  "gaps": [
+    {
+      "item": "TYR.vc's own portfolio page (tyr.vc/portfolio, aka tyrvc.com/portfolio) listing Occam as an investment",
+      "kind": "blocked",
+      "searched": [
+        "https://www.tyr.vc/portfolio",
+        "https://www.tyrvc.com/portfolio"
+      ]
+    },
+    {
+      "item": "Antler's own portfolio directory page listing Occam Industries as a portfolio company (searched the general portfolio listing and a search-parameterised URL; only Antler's blog, not the portfolio grid itself, could be confirmed)",
+      "kind": "not-found",
+      "searched": [
+        "https://www.antler.co/portfolio",
+        "https://www.antler.co/portfolio?search=occam"
+      ]
+    },
+    {
+      "item": "Freedom Fund VC's own site (freedom-fund.vc) listing Occam as a portfolio company",
+      "kind": "not-found",
+      "searched": [
+        "http://freedom-fund.vc/",
+        "https://freedom-fund.vc/portfolio",
+        "http://freedom-fund.vc/portfolio"
+      ]
+    },
+    {
+      "item": "UK trade mark registrations for 'Occam' / 'OccamX' at UKIPO",
+      "kind": "blocked",
+      "searched": [
+        "https://trademarks.ipo.gov.uk/ipo-tmtext/#/search?query=occam (returns a captcha/JS application gate, not machine-readable)"
+      ]
+    },
+    {
+      "item": "EUIPO trade mark registrations for 'Occam' / 'OccamX'",
+      "kind": "not-checkable",
+      "searched": [
+        "No automated lookup performed within session; EUIPO eSearch requires an interactive session not accessible via simple HTTP fetch"
+      ]
+    },
+    {
+      "item": "Whois/RDAP registrant identity for occam.industries (name/org/contact) beyond dates and nameservers",
+      "kind": "not-checkable",
+      "searched": [
+        "https://rdap.identitydigital.services/rdap/domain/occam.industries (registrant fields redacted per standard privacy/GDPR redaction in RDAP response)"
+      ]
+    },
+    {
+      "item": "Presto Ventures' separate portfolio page (prestoventures.com/portfolio, distinct from the techhorizons.eu Presto Tech Horizons site) listing Occam",
+      "kind": "not-found",
+      "searched": [
+        "https://www.prestoventures.com/portfolio"
+      ]
+    },
+    {
+      "item": "Internet Archive Wayback Machine first-capture date for occam.industries (earliest capture observed directly, before the fetch_verify re-check, was timestamp 20260316015000 i.e. 16 March 2026, per a manual CDX query); at verification time the Internet Archive's own service was returning HTTP 503 ('Internet Archive services are temporarily offline'), so the citation could not be re-verified and is withheld",
+      "kind": "blocked",
+      "searched": [
+        "http://web.archive.org/cdx/search/cdx?url=occam.industries*&output=text&limit=30&fl=timestamp,original,statuscode"
+      ]
+    },
+    {
+      "item": "occam.industries has no separate machine-readable sitemap.xml — requesting that path returns byte-identical content to a random nonexistent path on the same host (single-page-app fallback), which fetch_verify's control-probe logic correctly flags as unusable for citation even though it is itself the finding",
+      "kind": "blocked",
+      "searched": [
+        "https://occam.industries/sitemap.xml"
+      ]
+    },
+    {
+      "item": "Gui Wainwright LinkedIn profile (personal details, full work history, education, account creation age)",
+      "kind": "blocked",
+      "searched": [
+        "https://www.linkedin.com/in/guiamwainwright/",
+        "https://uk.linkedin.com/in/guiamwainwright"
+      ]
+    },
+    {
+      "item": "Occam Industries LinkedIn company page (headcount, founding year as stated by LinkedIn directly, verbatim)",
+      "kind": "blocked",
+      "searched": [
+        "https://www.linkedin.com/company/occam-industries"
+      ]
+    },
+    {
+      "item": "Guy Walker LinkedIn profile — appears to be a separate, more recently joined Occam Industries hire (distinct from CEO Gui Wainwright); his exact title/role and prior employer history could not be independently confirmed",
+      "kind": "blocked",
+      "searched": [
+        "https://www.linkedin.com/in/guywalkerit/",
+        "https://uk.linkedin.com/in/guywalkerit"
+      ]
+    },
+    {
+      "item": "Daniil Bash LinkedIn profile (full work history, Antler/A*STAR/University of Cambridge role details, dates)",
+      "kind": "blocked",
+      "searched": [
+        "https://uk.linkedin.com/in/daniil-bash",
+        "https://www.linkedin.com/in/daniil-bash/"
+      ]
+    },
+    {
+      "item": "Emilie Clarke role/title history at Occam (founder associate to Chief of Staff transition timeline)",
+      "kind": "blocked",
+      "searched": [
+        "https://sifted.eu/articles/founder-associate-career-move",
+        "https://www.vestbee.com/insights/articles/occam-closes-3-m"
+      ]
+    },
+    {
+      "item": "Independent (third-party) confirmation of Wainwright's specific employment at Cambridge Analytica or Ocado (e.g. via Ocado's own site, press mentioning him by name, or Cambridge Analytica records) beyond Occam-adjacent press (Antler blog, itkey.media) repeating the claim",
+      "kind": "not-found",
+      "searched": [
+        "Gui Wainwright Ocado official",
+        "Gui Wainwright Cambridge Analytica",
+        "Guiam Wainwright Ocado Technology"
+      ]
+    },
+    {
+      "item": "Occam Industries headcount as stated directly on occam.industries website (site is JS-rendered and could not be scraped via WebFetch)",
+      "kind": "not-checkable",
+      "searched": [
+        "https://occam.industries/",
+        "https://occam.industries/careers"
+      ]
+    },
+    {
+      "item": "City, University of London degree claim for Gui Wainwright, checked against the institution's own records/press",
+      "kind": "not-checkable",
+      "searched": [
+        "Gui Wainwright City University of London degree"
+      ]
+    },
+    {
+      "item": "Xinterra's LinkedIn post confirming Daniil Bash's co-founder role and PhD ('We are proud of our co-founder Daniil Bash, who defended his PhD thesis today. Congrats Dr. Bash!')",
+      "kind": "blocked",
+      "searched": [
+        "https://www.linkedin.com/posts/xinterra_we-are-proud-of-our-co-founder-daniil-bash-activity-7034395599336603648-uXME"
+      ]
+    },
+    {
+      "item": "occam.industries homepage meta description and og:description, quoted verbatim (\"Occam Industries — European defence technology... Sole European supplier to the Ukrainian front line\" / \"Modernising automation for modern conflict environments. Sole European supplier to the Ukrainian front line.\")",
+      "kind": "not-checkable",
+      "searched": [
+        "https://occam.industries/ via curl (text is genuinely present in the raw HTML head on direct fetch)",
+        "fetch_verify.py control-probe check: the site is a client-side SPA that serves an identical static index.html shell -- including these same meta tags -- for any path, including a deliberately nonexistent random path; the verifier therefore flags the homepage fetch as byte-identical to its own 404 fallback (soft-404) and the claim cannot be distinguished from a dead page by this method, even though the quoted text is real and live"
+      ]
+    },
+    {
+      "item": "OccamX pricing",
+      "kind": "not-found",
+      "searched": [
+        "occam.industries site and JS bundle",
+        "press coverage (eu-startups, itkey.media, therecursive, oboronka.mezha.ua, bebeez, techfundingnews, startupnewswire)"
+      ]
+    },
+    {
+      "item": "Named commercial or government customers with the counterparty's own site confirming a relationship with Occam Industries",
+      "kind": "not-found",
+      "searched": [
+        "occam.industries site and JS bundle (no logos/customer names found)",
+        "press coverage of the €3M pre-seed round (only investors and Brave1 named; 'European defence primes' and 'selected Ukrainian manufacturers' referenced but not named)"
+      ]
+    },
+    {
+      "item": "Brave1's own site/channels (brave1.gov.ua, catalog.brave1.gov.ua, my.brave1.gov.ua) independently stating Occam was cleared for integration testing",
+      "kind": "not-checkable",
+      "searched": [
+        "brave1.gov.ua/en and brave1.gov.ua news listings (no Occam mention found via curl/grep)",
+        "catalog.brave1.gov.ua (public catalog requires Diia authorization; closed catalog requires military Delta-system verification, so cannot be checked directly)",
+        "web search for site:brave1.gov.ua Occam and catalog.brave1.gov.ua Occam (no direct hits; only third-party press repeating the claim, plus a press-quoted statement from Brave1 CEO Andrii Hrytseniuk, captured as pr13)"
+      ]
+    },
+    {
+      "item": "Occam Industries GitHub repository activity, licences, last commit",
+      "kind": "not-found",
+      "searched": [
+        "github.com/occam-industries (an org with this name exists but was created 2015-09-26, predates the company's 2024 founding, and its 2 public repos ('test', 'scaly_rshiny_1') are unrelated test/demo apps)",
+        "GitHub search API for 'occam industries' and 'occamx' users/repos"
+      ]
+    },
+    {
+      "item": "Hacker News discussion of Occam Industries",
+      "kind": "not-found",
+      "searched": [
+        "http://hn.algolia.com/api/v1/search?query=Occam%20Industries (zero results returned)"
+      ]
+    },
+    {
+      "item": "Lever/Ashby job boards for Occam Industries",
+      "kind": "not-found",
+      "searched": [
+        "api.lever.co/v0/postings/occamindustries",
+        "api.lever.co/v0/postings/occam (both returned 'Document not found'; Greenhouse board at boards-api.greenhouse.io/v1/boards/occamindustries/jobs is confirmed live and used instead, see pr9)"
+      ]
+    },
+    {
+      "item": "Fortune Business Insights and Grand View Research market-size pages for counter-UAS / drone software",
+      "kind": "blocked",
+      "searched": [
+        "fortunebusinessinsights.com/counter-uas-market-111906 (Cloudflare 'Just a moment...' challenge page returned)",
+        "grandviewresearch.com/industry-analysis/drone-software-market-report (Cloudflare 'Just a moment...' challenge page returned)"
+      ]
+    },
+    {
+      "item": "ITAR/EAR exposure specific to Occam Industries",
+      "kind": "not-found",
+      "searched": [
+        "occam.industries site and JS bundle",
+        "press coverage of the company (no ITAR/EAR statement found; company is UK-based so EAR/ITAR exposure would depend on US-origin components or technology, which was not confirmed in any source)"
+      ]
+    },
+    {
+      "item": "Occam Industries' own site (occam.industries) as a directly fetchable citation",
+      "kind": "not-checkable",
+      "searched": [
+        "occam.industries is a client-rendered single-page app that serves an identical static HTML shell (with meta description tags) for every path, including nonexistent ones, so the automated fetch-verify control probe cannot distinguish the real page from a soft-404 and every direct citation of it fails verification",
+        "web.archive.org snapshots of occam.industries (5 captures, Mar-Jun 2026) are also unrendered SPA shells; their static meta description at the time read only 'Autonomy Simplified', an earlier, thinner tagline than the site's current live meta description ('Occam Industries — European defence technology. Tactical autonomy, machine vision, and scalable operational capability. Sole European supplier to the Ukrainian front line.', confirmed present in the live HTML source via direct curl but not independently verifiable through fetch_verify.py)",
+        "used eu-startups.com's verbatim quotation of Occam's own product description ('a retrofit computer vision-enabled autopilot designed specifically for FPV drones', attributed to the company) as the verifiable stand-in for the target's self-description in every ring claim below"
+      ]
+    },
+    {
+      "item": "Swarmer's own site self-description (swarmer.com)",
+      "kind": "blocked",
+      "searched": [
+        "swarmer.com (Cloudflare JS challenge / interstitial, no content served to non-browser fetch)",
+        "businesswire.com press release (HTTP 403 Forbidden)"
+      ]
+    },
+    {
+      "item": "Occam Industries comparison/alternatives page naming named competitors",
+      "kind": "not-found",
+      "searched": [
+        "occam.industries site crawl for /compare, /vs, /alternatives pages (site has no such pages; it is a single-page app with no visible sub-navigation)",
+        "site:occam.industries web search"
+      ]
+    },
+    {
+      "item": "Antler or Brave1 cohort page listing Occam alongside other named drone-autonomy portfolio companies as peers",
+      "kind": "not-found",
+      "searched": [
+        "Antler defence tech cohort drone autonomy portfolio",
+        "antler.co blog Spring 2026 U.S. portfolio showcase (no Occam or drone-autonomy peer named)",
+        "Brave1 market/dataroom listings for Occam specifically (not located by name in Brave1's own market/dataroom pages during this search)"
+      ]
+    },
+    {
+      "item": "Full country-served lists and headcount/pricing signals for ring-1 and ring-2 competitors beyond what appears in the cited self-descriptions and funding press",
+      "kind": "not-checkable",
+      "searched": [
+        "ModalAI (US-manufactured, sells globally per its own description) and Theseus (US, DoD/Special Forces customers per press) both serve markets outside the UK/Ukraine/wider-Europe scope the target is defined by, but no public pricing page was found on any of the ring-1/ring-2 sites checked (thefourthlaw.ai, theseus.us, dodsolution.com, auterion.com, modalai.com, quantum-systems.com, tekever.com, anduril.com) -- none publish list prices"
+      ]
+    }
+  ]
+}

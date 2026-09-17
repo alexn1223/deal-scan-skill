@@ -62,7 +62,7 @@ heading hides the fact that nothing was found.
 A claim with several sources carries several quote lines. A claim with `conflict: true`
 renders under a "N sources disagree" label with every source shown and no resolution.
 
-## The nine rules
+## The ten rules
 
 | Rule | Requirement |
 |---|---|
@@ -75,6 +75,16 @@ renders under a "N sources disagree" label with every source shown and no resolu
 | R7 | Every dossier quotation traces to a source in `findings.json` |
 | R8 | The disclaimer section is present |
 | R9 | Every competitor claim carries a ring of 1, 2 or 3, and ring 3 is not empty |
+| R10 | A quotation inside a `statement` also appears in one of that claim's own sources |
+
+R10 exists because the ban lists exempt quotations, and a quotation inside a statement is
+indistinguishable from the skill's own voice unless it can be traced. List C in
+`references/ban-list.md` handles the other half of the same problem: phrases such as
+*persons with significant control* are statutory names that happen to contain a banned
+word, and are blanked out before either list runs.
+
+`scripts/render_dossier.py` writes `dossier.md` and `gaps.md` from `findings.json`, which
+is what makes R7 meaningful — the dossier is a rendering, never a parallel document.
 
 R9 deserves a note too. Ring 3 — anyone operating in the same field — is never
 legitimately empty, so a run that finds nobody there has almost certainly defined the

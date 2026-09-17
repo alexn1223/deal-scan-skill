@@ -23,18 +23,42 @@ _WS = re.compile(r"\s+")
 
 
 def load_ban_list(path):
-    """Read exactly two fenced blocks: List A, then List B."""
+    """Read List A, List B, and an optional List C of exemptions."""
     with open(path, encoding="utf-8") as fh:
         text = fh.read()
     blocks = re.findall(r"```(.*?)```", text, re.S)
-    if len(blocks) != 2:
-        raise SystemExit(f"ban-list.md must hold exactly 2 fenced blocks, found {len(blocks)}")
+    if len(blocks) not in (2, 3):
+        raise SystemExit(f"ban-list.md must hold 2 or 3 fenced blocks, found {len(blocks)}")
     lists = []
     for block in blocks:
         entries = [ln.strip() for ln in block.splitlines()
                    if ln.strip() and not ln.strip().startswith("#")]
         lists.append(entries)
-    return lists[0], lists[1]
+    while len(lists) < 3:
+        lists.append([])
+    return lists[0], lists[1], lists[2]
+
+
+QUOTED = re.compile(
+    # Only unambiguous quotation delimiters. A bare ' is an apostrophe far more
+    # often than a quote mark -- "Horizons' own site" is not a quotation, and
+    # treating it as one produced 17 false positives on real agent output.
+    r'"([^"]{15,})"'
+    r"|\u201c([^\u201d]{15,})\u201d"
+    r"|\u00ab([^\u00bb]{15,})\u00bb"
+    r"|\u2018([^\u2019]{15,})\u2019"
+)
+
+
+def quoted_spans(text):
+    return [g for m in QUOTED.finditer(text) for g in m.groups() if g]
+
+
+def strip_exempt(text, exemptions):
+    """Blank out terms of art before the ban lists see the text."""
+    for phrase in exemptions:
+        text = re.compile(re.escape(_WS.sub(" ", phrase)), re.I).sub(" ", text)
+    return text
 
 
 def compile_entry(entry):
@@ -116,8 +140,8 @@ def main():
                            f"{src.get('url','')[:60]}")
 
     # R5 — ban lists, on skill-authored text only.
-    list_a, list_b = load_ban_list(ban_path)
-    authored = _WS.sub(" ", authored_text(dossier))
+    list_a, list_b, list_c = load_ban_list(ban_path)
+    authored = strip_exempt(_WS.sub(" ", authored_text(dossier)), list_c)
     for label, entries in (("A", list_a), ("B", list_b)):
         for entry in entries:
             match = compile_entry(entry).search(authored)
@@ -146,6 +170,21 @@ def main():
             continue
         if not any(quote.lower() in k or k in quote.lower() for k in known):
             fail("R7", f"quoted in dossier but absent from findings.json: {quote[:70]!r}")
+
+    # R10 — a quotation inside a statement must be in that claim's own sources,
+    # and is exempt from the ban lists. Quoting a source is reporting; the same
+    # words written in the skill's own voice are a verdict, and without this the
+    # two are indistinguishable to the scanner.
+    for claim in claims:
+        st = claim.get("statement", "")
+        own = " ".join(_WS.sub(" ", s.get("quote", ""))
+                       for s in claim.get("sources", [])).lower()
+        for span in quoted_spans(st):
+            span_n = _WS.sub(" ", span).strip()
+            if span_n.lower() not in own:
+                fail("R10", f"claim {claim.get('id','?')} quotes {span_n[:50]!r} in its "
+                            "statement, but no source of that claim carries it — put the "
+                            "quotation in sources, or drop the quotation marks")
 
     # R9 — competitor rings. Skipped entirely when the block was not run.
     comp = [c for c in claims if c.get("block") == "competitors"]
@@ -177,7 +216,7 @@ def main():
         return 1
 
     sources = sum(len(c.get("sources", [])) for c in claims)
-    print(f"PASSED — {len(claims)} claims, {sources} verified sources, 9/9 rules.")
+    print(f"PASSED — {len(claims)} claims, {sources} verified sources, 10/10 rules.")
     return 0
 
 

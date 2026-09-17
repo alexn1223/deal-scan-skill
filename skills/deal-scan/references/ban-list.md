@@ -2,6 +2,11 @@
 
 Two lists, two scopes. `scripts/validate_output.py` parses this file mechanically: it reads the two fenced code blocks below, in order, as List A and List B. Each non-empty, non-`#` line inside a block is one entry. An entry containing a space is matched as a case-insensitive phrase (whitespace runs collapsed to one space, both sides); an entry with no space is matched as a whole word (`\b<entry>\b`, case-insensitive).
 
+A third block, **List C**, holds exemptions: phrases that contain a banned word but are
+proper nouns or terms of art. They are blanked out of the text before either list is
+applied. Keep it short — an exemption is for a name the world already uses, never for a
+judgement you would like to keep.
+
 Both lists apply to **skill-authored text only** — every byte of `dossier.md` and `gaps.md` except the spans marked as verbatim quotes and except the disclaimer paragraph. A quoted source may contain any word at all; that is the point of quoting it. A press headline containing "fraud" is quotable. The skill writing "fraud" in its own voice is not.
 
 **List A — verdict vocabulary.** Characterizations of a company, a person, a market or a number. This skill characterizes nothing.
@@ -134,4 +139,17 @@ out of line
 above average
 below average
 outlier
+```
+
+**List C — exemptions.** Matched first, case-insensitively, and removed from the text before Lists A and B run. Each entry is a fixed phrase, never a bare word: `significant control` earns its place because the UK register of *persons with significant control* is a statutory name, while `significant` on its own stays banned.
+
+```
+person with significant control
+persons with significant control
+people with significant control
+significant control
+statement of capital
+Major General
+Major Command
+key management personnel
 ```
